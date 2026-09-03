@@ -472,6 +472,111 @@
 
     </section><!-- /Constructions Section -->
 
+    <!-- Interactive Multi-Project Draggable Before & After Split Slider -->
+    <section class="section light-background" style="padding: 75px 0;">
+      <div class="container">
+        <div class="text-center mb-4" data-aos="fade-up">
+          <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Interactive Transformation</span>
+          <h2 class="font-weight-bold" style="color: #121d33; font-size: 34px;">Drag To Reveal Transformations</h2>
+          <p class="text-muted">Click any project button below, then slide the orange handle left or right to reveal raw stages turning into pure luxury</p>
+        </div>
+
+        <!-- Project Selector Buttons -->
+        <div class="text-center mb-4" data-aos="fade-up">
+          <button class="ba-tab-btn active" onclick="switchBASliderProject('pop', this)"><i class="bi bi-lightbulb-fill me-1"></i> Living Room POP Ceiling</button>
+          <button class="ba-tab-btn" onclick="switchBASliderProject('church', this)"><i class="bi bi-building-check me-1"></i> Presbyterian Church</button>
+          <button class="ba-tab-btn" onclick="switchBASliderProject('palace', this)"><i class="bi bi-house-heart-fill me-1"></i> Royal Palace Facade</button>
+          <button class="ba-tab-btn" onclick="switchBASliderProject('pop2', this)"><i class="bi bi-stars me-1"></i> Villa Ceiling & Lighting</button>
+        </div>
+
+        <!-- Active Project Title Badge -->
+        <div class="text-center mb-3">
+          <h5 class="font-weight-bold text-dark" id="baProjectTitleEl">Modern Living Room POP Ceiling Transformation</h5>
+        </div>
+
+        <!-- Draggable Split Container -->
+        <div class="ba-comparison-wrapper" id="baComparisonWrapper" data-aos="zoom-in">
+          <div class="ba-img-layer ba-img-after">
+            <img src="freecoat/new-images/after-pop-ceiling.jpeg" alt="After Transformation" id="baImgAfterEl">
+            <span class="ba-badge-tag ba-badge-right" id="baBadgeAfterEl">✨ After: Completed Luxury POP</span>
+          </div>
+          <div class="ba-img-layer ba-img-before" id="baImgBefore">
+            <img src="freecoat/new-images/before-pop-ceiling.jpeg" alt="Before Transformation" id="baImgBeforeEl">
+            <span class="ba-badge-tag ba-badge-left" id="baBadgeBeforeEl">🛠️ Before: Raw POP Framing</span>
+          </div>
+          <div class="ba-slider-handle" id="baSliderHandle"><i class="bi bi-arrows-collapse"></i></div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="#bookingModal" data-bs-toggle="modal" class="btn btn-warning btn-lg px-5 py-3 rounded-pill text-dark font-weight-bold shadow-sm"><i class="bi bi-magic me-2"></i> Get This Transformation For Your Home</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Project Cost Estimator -->
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+            <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Instant Quote Tool</span>
+            <h2 class="font-weight-bold mb-3" style="color: #121d33; font-size: 34px;">Calculate Your Project Estimate in 10 Seconds</h2>
+            <p class="lead text-muted mb-4">Select your scope and property size below to get an instant realistic price estimate. Lock in your quote directly on WhatsApp!</p>
+            <div class="d-flex align-items-center gap-3">
+              <div class="text-warning fs-3"><i class="bi bi-patch-check-fill"></i></div>
+              <div>
+                <strong class="d-block text-dark">No Hidden Fees Guarantee</strong>
+                <span class="text-muted small">Transparent pricing with free on-site physical inspection.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="estimator-card">
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="estimator-step-title">Step 1: Select Work Scope</div>
+                  <div class="estimator-option-btn selected" data-scope-option onclick="selectEstimatorOption('scope', 'interior', this)">
+                    <span>🎨 Interior Painting & Decor</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div class="estimator-option-btn" data-scope-option onclick="selectEstimatorOption('scope', 'pop', this)">
+                    <span>💡 POP Ceiling & Lights</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div class="estimator-option-btn" data-scope-option onclick="selectEstimatorOption('scope', 'luxury', this)">
+                    <span>🏰 Luxury Mansion Full Finish</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div class="estimator-option-btn" data-scope-option onclick="selectEstimatorOption('scope', 'commercial', this)">
+                    <span>🏢 Hotel & Commercial Plaza</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="estimator-step-title">Step 2: Property Scale</div>
+                  <div class="estimator-option-btn selected" data-size-option onclick="selectEstimatorOption('size', 'standard', this)">
+                    <span>🏠 2 - 3 Bedroom Property</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div class="estimator-option-btn" data-size-option onclick="selectEstimatorOption('size', 'medium', this)">
+                    <span>🏡 4 - 5 Bedroom Executive Villa</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div class="estimator-option-btn" data-size-option onclick="selectEstimatorOption('size', 'large', this)">
+                    <span>🏰 Large Mansion / Commercial</span> <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-2">
+                  <div class="estimator-price-result">
+                    <span class="text-white-50 uppercase small font-weight-bold">Estimated Cost Range (Ghana Cedi)</span>
+                    <div class="estimator-price-amount" id="estimatorPriceDisplay">GH₵ 2,500 - GH₵ 4,500</div>
+                    <p class="small text-white-50 mb-3">Includes labor, surface scrubbing, primer & premium paint finish</p>
+                    <button onclick="sendEstimateToWhatsApp()" class="btn btn-warning btn-lg text-dark font-weight-bold px-5 rounded-pill shadow"><i class="bi bi-whatsapp me-2"></i> Lock In Quote on WhatsApp</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="services section light-background">
 
@@ -620,6 +725,48 @@
       </div>
 
     </section><!-- /Alt Services Section -->
+
+    <!-- Diaspora & International Client Booking Hub -->
+    <section class="diaspora-section">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-8" data-aos="fade-right">
+            <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Living Overseas in UK, USA, Europe or Canada?</span>
+            <h2 class="font-weight-bold mt-1 text-white" style="font-size: 34px;">We Manage & Decorate Your Building in Ghana Seamlessly</h2>
+            <p class="lead text-white-50 mb-0">Build or renovate your dream home in Ghana while living abroad with 100% peace of mind, live video site updates, and milestone payments.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0" data-aos="fade-left">
+            <a href="https://wa.me/233240854667?text=Hi%20FreeCoat%20Decor!%20I%20live%20abroad%20and%20want%20a%20consultation%20for%20my%20building%20in%20Ghana." target="_blank" class="btn btn-warning btn-lg px-4 py-3 rounded-pill text-dark font-weight-bold shadow-lg"><i class="bi bi-whatsapp me-2"></i> Overseas WhatsApp Consultation</a>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="diaspora-feature-box">
+              <div class="diaspora-icon"><i class="bi bi-camera-reels"></i></div>
+              <h4 class="text-white font-weight-bold mb-2">Live Video Site Walkthroughs</h4>
+              <p class="text-white-50 mb-0">Never worry about distance. Receive detailed HD video recordings and live WhatsApp video calls at every project milestone.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="diaspora-feature-box">
+              <div class="diaspora-icon"><i class="bi bi-credit-card-2-front"></i></div>
+              <h4 class="text-white font-weight-bold mb-2">Transparent Milestone Payments</h4>
+              <p class="text-white-50 mb-0">Pay securely in stages as work progresses. Clear invoices, official receipts, and photo proof before any payment tranche.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="diaspora-feature-box">
+              <div class="diaspora-icon"><i class="bi bi-shield-check"></i></div>
+              <h4 class="text-white font-weight-bold mb-2">10-Year Workmanship Warranty</h4>
+              <p class="text-white-50 mb-0">We use top-tier weather barrier paints and premium POP materials that withstand tropical humidity for over a decade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Features Section -->
     <section id="features" class="features section">
@@ -1400,6 +1547,16 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <!-- Live Social Proof Toast Notification -->
+  <div class="social-proof-toast" id="socialProofToast">
+    <div class="social-proof-avatar"><i class="bi bi-patch-check-fill"></i></div>
+    <div class="social-proof-text">
+      <strong id="toastName">Nana Kwame (East Legon)</strong>
+      <span id="toastAction">Booked Luxury Mansion Interior</span>
+      <div class="social-proof-time"><i class="bi bi-clock-history me-1"></i><span id="toastTime">Just now</span></div>
+    </div>
+  </div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -1412,6 +1569,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Advanced Conversion Features Script -->
+  <script src="assets/js/conversion-features.js"></script>
 
 </body>
 
