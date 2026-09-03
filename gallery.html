@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Complete Project Gallery - FreeCoat Decor | Painting & Decoration Portfolio</title>
+  <meta name="description" content="Browse our complete gallery of painting and decoration projects in Ghana and abroad. Luxury mansions, POP ceilings, commercial buildings, and 3D wall effects.">
+  <meta name="keywords" content="painting gallery Ghana, FreeCoat Decor projects, luxury mansion interior Accra, POP ceiling designs Ghana, international painting contracts">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .gallery-filter-btn {
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 2px solid #e0e0e0;
+      background: #fff;
+      color: #333;
+      margin: 5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-filter-btn:hover,
+    .gallery-filter-btn.active {
+      background: #FF9900;
+      color: #fff;
+      border-color: #FF9900;
+      box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+    }
+    .gallery-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+      margin-bottom: 30px;
+      position: relative;
+      border: 1px solid #f0f0f0;
+    }
+    .gallery-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+      border-color: #FF9900;
+    }
+    .gallery-img-wrapper {
+      position: relative;
+      height: 270px;
+      overflow: hidden;
+    }
+    .gallery-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-card:hover .gallery-img-wrapper img {
+      transform: scale(1.08);
+    }
+    .gallery-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14, 29, 52, 0.9) 0%, rgba(14, 29, 52, 0.2) 60%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .gallery-card:hover .gallery-card-overlay {
+      opacity: 1;
+    }
+    .gallery-card-content h5 {
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .gallery-card-content p {
+      color: #FF9900;
+      font-size: 13px;
+      margin: 0;
+      font-weight: 500;
+    }
+    .gallery-card-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(255, 153, 0, 0.95);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      z-index: 5;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .gallery-zoom-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #121d33;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all 0.3s;
+      z-index: 5;
+      text-decoration: none !important;
+    }
+    .gallery-zoom-btn:hover {
+      background: #FF9900;
+      color: #fff;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body class="gallery-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/freecoat-logo.jpg" alt="FreeCoat Decor">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a href="#bookingModal" data-bs-toggle="modal" class="btn-book-nav"><i class="bi bi-calendar-check"></i> Book Project</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(freecoat/new-images/banner-landing-page.jpeg);">
+      <div class="container position-relative">
+        <h1>Masterpiece Project Gallery</h1>
+        <p class="text-white-50">Explore 350+ Completed Painting, POP Ceiling & Decoration Works Across Ghana & Abroad</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Gallery</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Category Quick-Selector Tiles -->
+    <section class="section light-background" style="padding-bottom: 30px;">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Browse By Specialization</span>
+          <h2 class="font-weight-bold" style="color: #121d33; font-size: 32px;">Explore Work Categories</h2>
+          <p class="text-muted">Click any tile below to filter and view specific project transformations</p>
+        </div>
+
+        <div class="category-tiles-container" data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="category-tile-card active-tile" onclick="filterCategory('all')">
+            <div class="category-tile-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+            <div class="category-tile-title">All Completed Works</div>
+            <div class="category-tile-count">90+ Images & Works</div>
+          </div>
+
+          <div class="category-tile-card" onclick="filterCategory('mansions')">
+            <div class="category-tile-icon"><i class="bi bi-house-door-fill"></i></div>
+            <div class="category-tile-title">Luxury Mansions</div>
+            <div class="category-tile-count">Billionaire Estates</div>
+          </div>
+
+          <div class="category-tile-card" onclick="filterCategory('interior')">
+            <div class="category-tile-icon"><i class="bi bi-palette-fill"></i></div>
+            <div class="category-tile-title">Interior & Walls</div>
+            <div class="category-tile-count">Custom Finishes & TV Units</div>
+          </div>
+
+          <div class="category-tile-card" onclick="filterCategory('pop')">
+            <div class="category-tile-icon"><i class="bi bi-lightbulb-fill"></i></div>
+            <div class="category-tile-title">POP Ceiling & Lights</div>
+            <div class="category-tile-count">Modern Ceiling Art</div>
+          </div>
+
+          <div class="category-tile-card" onclick="filterCategory('commercial')">
+            <div class="category-tile-icon"><i class="bi bi-building"></i></div>
+            <div class="category-tile-title">Exterior & Commercial</div>
+            <div class="category-tile-count">Plazas, Churches & Roofs</div>
+          </div>
+
+          <div class="category-tile-card" onclick="filterCategory('international')">
+            <div class="category-tile-icon"><i class="bi bi-globe2"></i></div>
+            <div class="category-tile-title">Abroad Projects</div>
+            <div class="category-tile-count">International Contracts</div>
+          </div>
+
+          <div class="category-tile-card" onclick="filterCategory('wip')">
+            <div class="category-tile-icon"><i class="bi bi-tools"></i></div>
+            <div class="category-tile-title">Work in Progress</div>
+            <div class="category-tile-count">CEO & Team at Work</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Endless Continuous Loop Showcase -->
+    <section class="marquee-section">
+      <div class="marquee-header" data-aos="fade-up">
+        <h3><i class="bi bi-arrow-repeat me-2"></i>Endless Loop Showcase</h3>
+        <p>Continuous showcase of our finest painting and decoration projects in motion</p>
+      </div>
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- 8 Unique Showcase Items -->
+          <div class="marquee-item">
+            <img src="freecoat/new-images/full-complete-mansion-interior.jpeg" alt="Luxury Mansion">
+            <div class="marquee-overlay">
+              <h5>Luxury Mansion Interior</h5>
+              <p>East Legon, Accra</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad.jpeg" alt="International Work">
+            <div class="marquee-overlay">
+              <h5>International Project</h5>
+              <p>Abroad Contract</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/pop-ceiling.jpg" alt="POP Ceiling">
+            <div class="marquee-overlay">
+              <h5>3D POP Ceiling Design</h5>
+              <p>Cantonments</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/Long-cormercial-story-building.jpeg" alt="Commercial Plaza">
+            <div class="marquee-overlay">
+              <h5>Multi-Story Commercial</h5>
+              <p>Spintex Road</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/presby-church-fully-after.jpg" alt="Church Transformation">
+            <div class="marquee-overlay">
+              <h5>Presbyterian Church</h5>
+              <p>Accra Region</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/tv-unit-design.jpeg" alt="TV Unit Design">
+            <div class="marquee-overlay">
+              <h5>Custom TV Wall Design</h5>
+              <p>Airport Residential</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/palace.jpg" alt="Palace Painting">
+            <div class="marquee-overlay">
+              <h5>Royal Palace Painting</h5>
+              <p>Greater Accra</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/roofing-painting-project.jpeg" alt="Roofing Painting">
+            <div class="marquee-overlay">
+              <h5>Roof & Exterior Painting</h5>
+              <p>Tema Industrial</p>
+            </div>
+          </div>
+
+          <!-- Repeat items for seamless 100% loop -->
+          <div class="marquee-item">
+            <img src="freecoat/new-images/full-complete-mansion-interior.jpeg" alt="Luxury Mansion">
+            <div class="marquee-overlay">
+              <h5>Luxury Mansion Interior</h5>
+              <p>East Legon, Accra</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad.jpeg" alt="International Work">
+            <div class="marquee-overlay">
+              <h5>International Project</h5>
+              <p>Abroad Contract</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/pop-ceiling.jpg" alt="POP Ceiling">
+            <div class="marquee-overlay">
+              <h5>3D POP Ceiling Design</h5>
+              <p>Cantonments</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/Long-cormercial-story-building.jpeg" alt="Commercial Plaza">
+            <div class="marquee-overlay">
+              <h5>Multi-Story Commercial</h5>
+              <p>Spintex Road</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/presby-church-fully-after.jpg" alt="Church Transformation">
+            <div class="marquee-overlay">
+              <h5>Presbyterian Church</h5>
+              <p>Accra Region</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/tv-unit-design.jpeg" alt="TV Unit Design">
+            <div class="marquee-overlay">
+              <h5>Custom TV Wall Design</h5>
+              <p>Airport Residential</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/palace.jpg" alt="Palace Painting">
+            <div class="marquee-overlay">
+              <h5>Royal Palace Painting</h5>
+              <p>Greater Accra</p>
+            </div>
+          </div>
+          <div class="marquee-item">
+            <img src="freecoat/new-images/roofing-painting-project.jpeg" alt="Roofing Painting">
+            <div class="marquee-overlay">
+              <h5>Roof & Exterior Painting</h5>
+              <p>Tema Industrial</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Project Gallery Grid -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Category Filter Buttons -->
+        <div class="text-center mb-4" data-aos="fade-up">
+          <button class="gallery-filter-btn active" data-filter="all">All Projects</button>
+          <button class="gallery-filter-btn" data-filter="mansions">Mansions & Luxury</button>
+          <button class="gallery-filter-btn" data-filter="interior">Interior & Walls</button>
+          <button class="gallery-filter-btn" data-filter="pop">POP Ceiling</button>
+          <button class="gallery-filter-btn" data-filter="commercial">Exterior & Commercial</button>
+          <button class="gallery-filter-btn" data-filter="international">International</button>
+          <button class="gallery-filter-btn" data-filter="wip">Work in Progress</button>
+        </div>
+
+        <div class="row gy-4 mt-2" id="gallery-grid">
+
+          <!-- NEW MANSION IMAGES -->
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">New Addition</span>
+              <a href="freecoat/new-images/full-complete-mansion-interior.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/full-complete-mansion-interior.jpeg" alt="Complete Luxury Mansion Interior">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Full Mansion Grand Interior</h5>
+                    <p>East Legon Luxury Residence</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up" data-aos-delay="50">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">New Addition</span>
+              <a href="freecoat/new-images/full-complete-mansion-interior-2.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/full-complete-mansion-interior-2.jpeg" alt="Mansion Living Area">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Mansion Main Living Lounge</h5>
+                    <p>Premium Satin Paint Finish</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">New Addition</span>
+              <a href="freecoat/new-images/full-complete-mansion-interior-3.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/full-complete-mansion-interior-3.jpeg" alt="Mansion Dining Area">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Mansion Formal Dining Room</h5>
+                    <p>Sophisticated Wall Coating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up" data-aos-delay="150">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">New Addition</span>
+              <a href="freecoat/new-images/full-complete-mansion-interior-4.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/full-complete-mansion-interior-4.jpeg" alt="Mansion Bedroom Suite">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Master Bedroom Suite</h5>
+                    <p>Custom Color Tone & POP Accent</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">New Addition</span>
+              <a href="freecoat/new-images/full-complete-mansion-interior-5.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/full-complete-mansion-interior-5.jpeg" alt="Mansion Kitchen Area">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Gourmet Kitchen Wall Finish</h5>
+                    <p>Wipeable Hygienic Coating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up" data-aos-delay="250">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">New Addition</span>
+              <a href="freecoat/new-images/full-complete-mansion-interior-6.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/full-complete-mansion-interior-6.jpeg" alt="Mansion Hallway">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Executive Corridor & Ceiling</h5>
+                    <p>Glass & Wall Harmony Design</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item mansions" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Luxury Estate</span>
+              <a href="freecoat/fully-completed-billionaire-mansion.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/fully-completed-billionaire-mansion.jpg" alt="Completed Billionaire Mansion">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Fully Completed Billionaire Mansion</h5>
+                    <p>Exterior Weather Shield Finish</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERNATIONAL PROJECTS -->
+          <div class="col-lg-4 col-md-6 gallery-card-item international" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">International</span>
+              <a href="freecoat/new-images/traveled-abraod-worked-with-clients-abroad.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad.jpeg" alt="International Project">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>International Villa Project</h5>
+                    <p>Overseas Client Painting Contract</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item international" data-aos="fade-up" data-aos-delay="50">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">International</span>
+              <a href="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-1.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-1.jpeg" alt="International Residence">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>High-End Overseas Residence</h5>
+                    <p>Precision Spray Finishing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item international" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">International</span>
+              <a href="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-2.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-2.jpeg" alt="International Commercial">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>International Commercial Contract</h5>
+                    <p>Multi-Room Decorative Coating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item international" data-aos="fade-up" data-aos-delay="150">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">International</span>
+              <a href="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-3.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-3.jpeg" alt="Abroad Interior">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Abroad Executive Suite</h5>
+                    <p>Custom Ceiling & Wall Accents</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item international" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">International</span>
+              <a href="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-5.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-5.jpeg" alt="Abroad Luxury Home">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Overseas Luxury Estate</h5>
+                    <p>Complete Painting Transformation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERIOR & CUSTOM WALLS -->
+          <div class="col-lg-4 col-md-6 gallery-card-item interior" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Custom Design</span>
+              <a href="freecoat/new-images/tv-unit-design.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/tv-unit-design.jpeg" alt="Modern TV Unit Design">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Modern TV Wall Entertainment Unit</h5>
+                    <p>Custom 3D Backlight Wall Feature</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item interior" data-aos="fade-up" data-aos-delay="50">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Wall Decor</span>
+              <a href="freecoat/new-images/interior-wall-decoration.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/interior-wall-decoration.jpeg" alt="Interior Wall Decoration">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Textured Accent Wall Finishing</h5>
+                    <p>Venetian & Metallic Effects</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item interior" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Interior</span>
+              <a href="freecoat/new-images/interior-design-1.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/interior-design-1.jpeg" alt="Contemporary Interior Design">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Contemporary Living Lounge</h5>
+                    <p>Seamless Paint Coating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item interior" data-aos="fade-up" data-aos-delay="150">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Interior</span>
+              <a href="freecoat/new-images/final-interior-design.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/final-interior-design.jpeg" alt="Final Interior Touch">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Completed Living Room Finish</h5>
+                    <p>High-Gloss Accent Borders</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item interior" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">3D Effect</span>
+              <a href="freecoat/smooth-wall-design.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/smooth-wall-design.jpg" alt="3D Stucco Wall Effect">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>3D Stucco Wall Texture</h5>
+                    <p>Smooth Decorative Stucco Coating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- POP CEILING & LIGHTS -->
+          <div class="col-lg-4 col-md-6 gallery-card-item pop" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">POP Ceiling</span>
+              <a href="freecoat/pop-ceiling.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/pop-ceiling.jpg" alt="POP Ceiling Design">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Modern POP Ceiling Installation</h5>
+                    <p>Recessed LED Strip Lighting</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item pop" data-aos="fade-up" data-aos-delay="50">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">POP & Lights</span>
+              <a href="freecoat/nice-living-rom-with-lights.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/nice-living-rom-with-lights.jpg" alt="Living Room Ceiling Lights">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Living Room Ceiling Lighting</h5>
+                    <p>Warm Ambient LED Lighting Scheme</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item pop" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">POP Ceiling</span>
+              <a href="freecoat/pop-ceiling-3.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/pop-ceiling-3.jpg" alt="Multi-Level POP Ceiling">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Multi-Tier POP Ceiling Art</h5>
+                    <p>Architectural Moldings & Spotlights</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EXTERIOR & COMMERCIAL -->
+          <div class="col-lg-4 col-md-6 gallery-card-item commercial" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Commercial Plaza</span>
+              <a href="freecoat/new-images/Long-cormercial-story-building.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/Long-cormercial-story-building.jpeg" alt="Multi-Story Commercial Building">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Multi-Story Commercial Plaza</h5>
+                    <p>High-Rise Exterior Weather Coating</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item commercial" data-aos="fade-up" data-aos-delay="50">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Roofing & Exterior</span>
+              <a href="freecoat/new-images/roofing-painting-project.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/roofing-painting-project.jpeg" alt="Roofing Painting Project">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Roofing & Facade Sealant Painting</h5>
+                    <p>UV & Moisture Proof Acrylic Finish</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item commercial" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Church Project</span>
+              <a href="freecoat/fully-finished-cormercial-presby-church-completed.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/fully-finished-cormercial-presby-church-completed.jpg" alt="Presbyterian Church Finished">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Presbyterian Church Complex</h5>
+                    <p>Complete Exterior & Interior Revamp</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item commercial" data-aos="fade-up" data-aos-delay="150">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Exterior Design</span>
+              <a href="freecoat/new-images/enterior-decoration.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/enterior-decoration.jpeg" alt="Exterior Wall Decoration">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Modern Facade Exterior Decor</h5>
+                    <p>Graphiato & Textured Wall Finish</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WORK IN PROGRESS -->
+          <div class="col-lg-4 col-md-6 gallery-card-item wip" data-aos="fade-up">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Live Progress</span>
+              <a href="freecoat/new-images/live-work-in-progress.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/live-work-in-progress.jpeg" alt="Live Work in Progress">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Site Preparation & Wall Priming</h5>
+                    <p>Rigorous Surface Scrubbing & Primer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item wip" data-aos="fade-up" data-aos-delay="50">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Master Painter</span>
+              <a href="freecoat/ceo-himself-working-ongoing.jpg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/ceo-himself-working-ongoing.jpg" alt="CEO Working On Site">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>CEO Emmanuel Hand-on Execution</h5>
+                    <p>On-Site Quality Supervision</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 gallery-card-item wip" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-card">
+              <span class="gallery-card-badge">Live Progress</span>
+              <a href="freecoat/new-images/live-work-in-progress-1.jpeg" class="gallery-zoom-btn glightbox" data-gallery="gallery-all"><i class="bi bi-zoom-in"></i></a>
+              <div class="gallery-img-wrapper">
+                <img src="freecoat/new-images/live-work-in-progress-1.jpeg" alt="Ongoing Wall Finish">
+                <div class="gallery-card-overlay">
+                  <div class="gallery-card-content">
+                    <h5>Precision Masking & Painting</h5>
+                    <p>Clean Line Craftsman Supervision</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After Transformations Section -->
+    <section class="section light-background" style="padding: 70px 0;">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Dramatic Results</span>
+          <h2 class="font-weight-bold" style="color: #121d33; font-size: 32px;">Before & After Transformations</h2>
+          <p class="text-muted">Witness how FreeCoat Decor turns aging structures into stunning architectural gems</p>
+        </div>
+
+        <div class="row gy-4">
+          <!-- Transformation 1: Church -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="before-after-card">
+              <div class="row g-0">
+                <div class="col-6">
+                  <div class="before-after-img-wrap">
+                    <span class="badge-state badge-before">Before</span>
+                    <img src="freecoat/preby-church-before.jpg" alt="Church Before">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="before-after-img-wrap">
+                    <span class="badge-state badge-after">After</span>
+                    <img src="freecoat/presby-church-fully-after.jpg" alt="Church After">
+                  </div>
+                </div>
+              </div>
+              <div class="before-after-body">
+                <h4>Presbyterian Church Revamp</h4>
+                <p>Complete weather barrier coating, vibrant color restoration, and structural interior renovation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transformation 2: Royal Palace -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="before-after-card">
+              <div class="row g-0">
+                <div class="col-6">
+                  <div class="before-after-img-wrap">
+                    <span class="badge-state badge-before">Before</span>
+                    <img src="freecoat/palace-before.jpg" alt="Palace Before">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="before-after-img-wrap">
+                    <span class="badge-state badge-after">After</span>
+                    <img src="freecoat/palace.jpg" alt="Palace After">
+                  </div>
+                </div>
+              </div>
+              <div class="before-after-body">
+                <h4>Royal Palace Facade Transformation</h4>
+                <p>Upgraded from bare cement walls to a royal gold & white weather-resistant luxury finish.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High Conversion Call to Action Banner -->
+    <section class="section" style="background: linear-gradient(135deg, #121d33 0%, #1c2d4d 100%); padding: 80px 0; color: #fff;">
+      <div class="container text-center" data-aos="zoom-in">
+        <h2 style="color: #FF9900; font-size: 38px; font-weight: 800;" class="mb-3">Inspired by Our Masterpiece Gallery?</h2>
+        <p class="lead mb-4" style="color: rgba(255,255,255,0.9); max-width: 750px; margin: 0 auto;">Give your home, church, office, or commercial plaza the royal touch it deserves. Get a free site inspection and transparent estimate within 24 hours!</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+          <a href="#bookingModal" data-bs-toggle="modal" class="btn btn-warning btn-lg px-5 py-3 rounded-pill text-dark font-weight-bold shadow-lg"><i class="bi bi-calendar-check-fill me-2"></i> Book Your Project Now</a>
+          <a href="https://wa.me/233240854667?text=Hi%20FreeCoat%20Decor!%20I%20saw%20your%20gallery%20and%20want%20to%20book%20a%20painting%20project." target="_blank" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill font-weight-bold"><i class="bi bi-whatsapp me-2"></i> Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Quick Project Booking Modal -->
+  <div class="modal fade modal-booking" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title font-weight-bold text-warning mb-1" id="bookingModalLabel"><i class="bi bi-paint-bucket me-2"></i>Book Your Painting & Decor Project</h4>
+            <p class="text-white-50 small mb-0">Get a free consultation & transparent price estimate within 24 hours.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="booking-trust-bar">
+            <div class="booking-trust-item"><i class="bi bi-shield-check"></i> 100% Quality Guaranteed</div>
+            <div class="booking-trust-item"><i class="bi bi-clock-history"></i> 14+ Yrs Experience</div>
+            <div class="booking-trust-item"><i class="bi bi-award"></i> Free Site Inspection</div>
+          </div>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="php-email-form">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <label class="form-label font-weight-bold text-dark">Full Name *</label>
+                <input type="text" name="name" class="form-control" placeholder="e.g. Nana Kwame" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label font-weight-bold text-dark">Phone Number (WhatsApp) *</label>
+                <input type="tel" name="phone" class="form-control" placeholder="e.g. 024 085 4667" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label font-weight-bold text-dark">Email Address</label>
+                <input type="email" name="email" class="form-control" placeholder="name@example.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label font-weight-bold text-dark">Project Category *</label>
+                <select class="form-select" name="project_type" required>
+                  <option value="" selected disabled>Select Project Category...</option>
+                  <option value="Residential Painting">Residential Painting & Decor</option>
+                  <option value="Luxury Mansion Finish">Luxury Mansion / Villa Finishing</option>
+                  <option value="POP Ceiling Design">POP Ceiling & Integrated Lighting</option>
+                  <option value="Commercial & Office Building">Commercial / Office Building</option>
+                  <option value="Specialized 3D Wall Effect">Specialized 3D Wall & Stucco Effect</option>
+                  <option value="Tiling & Custom TV Unit">Tiling & Custom TV Unit</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label font-weight-bold text-dark">Location / Area in Ghana *</label>
+                <input type="text" name="location" class="form-control" placeholder="e.g. East Legon, Spintex, Tema, Cantonments" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label font-weight-bold text-dark">Project Details</label>
+                <textarea class="form-control" name="message" rows="3" placeholder="Describe room sizes, timeline, preferred colors or specific request..."></textarea>
+              </div>
+              <input type="hidden" name="_subject" value="New Fast Booking Request - FreeCoat Decor Gallery">
+              <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
+              <div class="col-12 text-center mt-4">
+                <button type="submit" class="btn btn-warning btn-lg text-dark font-weight-bold px-5 rounded-pill shadow"><i class="bi bi-send-fill me-2"></i> Submit Booking Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">FreeCoat Decor</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Plot 45, Spintex Road</p>
+            <p>Accra, Ghana</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+233 24 085 4667</span></p>
+            <p><strong>Email:</strong> <span>freecoatpaintingsdecor@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/233240854667" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href=""><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html">Interior & Exterior Decoration</a></li>
+            <li><a href="services.html">General Painting & Spray Finishing</a></li>
+            <li><a href="services.html">POP Ceiling Design</a></li>
+            <li><a href="services.html">Tiling Works</a></li>
+            <li><a href="services.html">3D Wall & Ceiling Effects</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="#">East Legon</a></li>
+            <li><a href="#">Tema</a></li>
+            <li><a href="#">Spintex</a></li>
+            <li><a href="#">Cantonments</a></li>
+            <li><a href="#">Greater Accra Region</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">FreeCoat Decor</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Mobile Floating Action Buttons -->
+  <a href="tel:+233240854667" class="call-float" title="Call Us">
+    <i class="bi bi-telephone-fill"></i>
+  </a>
+  
+  <a href="https://wa.me/233240854667?text=Hi%20FreeCoat%20Decor!%20I%20saw%20your%20gallery%20and%20would%20like%20to%20get%20a%20quote." class="whatsapp-float" title="Chat on WhatsApp" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Filter JavaScript -->
+  <script>
+    function filterCategory(category) {
+      const cards = document.querySelectorAll('.gallery-card-item');
+      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+      const tileCards = document.querySelectorAll('.category-tile-card');
+
+      // Update active filter buttons
+      filterBtns.forEach(btn => {
+        if(btn.getAttribute('data-filter') === category) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Update active tile cards
+      tileCards.forEach(tile => {
+        tile.classList.remove('active-tile');
+      });
+
+      // Show/Hide cards with animation
+      cards.forEach(card => {
+        if(category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'block';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+          card.style.opacity = '0';
+        }
+      });
+    }
+
+    // Button event listeners
+    document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterCategory(this.getAttribute('data-filter'));
+      });
+    });
+
+    // Initialize Lightbox
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+
+</body>
+</html>
