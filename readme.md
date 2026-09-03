@@ -6,7 +6,7 @@
 
 ## 🏠 About FreeCoat Decor
 
-FreeCoat Decor is Ghana's trusted painting and decoration company, serving residential, commercial, and government clients across the Greater Accra Region since 2015.
+FreeCoat Decor is Ghana's trusted painting and decoration company, serving residential, commercial, and government clients across the Greater Accra Region since 2012.
 
 ### Our Services:
 - ✅ Interior & Exterior Painting
@@ -105,4 +105,4 @@ This is a business website. For inquiries, please contact us directly.
 
 **Built with ❤️ for FreeCoat Decor**
 
-*Transforming Spaces Across Ghana Since 2015*
+*Transforming Spaces Across Ghana Since 2012*
