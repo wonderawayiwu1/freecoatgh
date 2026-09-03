@@ -24,13 +24,7 @@ const baProjects = {
     afterLabel: '✨ After: Completed Luxury POP',
     title: 'Modern Living Room POP Ceiling Transformation'
   },
-  church: {
-    before: 'freecoat/preby-church-before.jpg',
-    after: 'freecoat/presby-church-fully-after.jpg',
-    beforeLabel: '⛪ Before: Weathered Exterior',
-    afterLabel: '✨ After: Presbyterian Church Revamp',
-    title: 'Presbyterian Church Exterior & Interior Overhaul'
-  },
+
   palace: {
     before: 'freecoat/palace-before.jpg',
     after: 'freecoat/palace.jpg',
@@ -157,43 +151,29 @@ function selectEstimatorOption(type, value, element) {
 }
 
 function calculateEstimatedPrice() {
-  let basePrice = 2500; // GHS base
-  let rangeMax = 4500;
-
-  if (selectedScope === 'pop') {
-    basePrice = 3500;
-    rangeMax = 6500;
-  } else if (selectedScope === 'luxury') {
-    basePrice = 8500;
-    rangeMax = 16000;
-  } else if (selectedScope === 'commercial') {
-    basePrice = 12000;
-    rangeMax = 28000;
-  }
-
-  if (selectedSize === 'medium') {
-    basePrice *= 1.4;
-    rangeMax *= 1.5;
-  } else if (selectedSize === 'large') {
-    basePrice *= 2.2;
-    rangeMax *= 2.4;
-  }
-
-  const formattedMin = 'GH₵ ' + Math.round(basePrice).toLocaleString();
-  const formattedMax = 'GH₵ ' + Math.round(rangeMax).toLocaleString();
-
   const priceEl = document.getElementById('estimatorPriceDisplay');
   if (priceEl) {
-    priceEl.innerText = formattedMin + ' - ' + formattedMax;
+    priceEl.innerText = "Custom Private Quote";
   }
 }
 
 function sendEstimateToWhatsApp() {
-  const scopeText = selectedScope.toUpperCase();
-  const sizeText = selectedSize.toUpperCase();
-  const priceDisplay = document.getElementById('estimatorPriceDisplay')?.innerText || 'Custom Quote';
+  const scopeNames = {
+    'interior': 'Interior Painting & Decor',
+    'pop': 'POP Ceiling & Lights',
+    'luxury': 'Luxury Mansion Full Finish',
+    'commercial': 'Hotel & Commercial Plaza'
+  };
+  const sizeNames = {
+    'standard': '2 - 3 Bedroom Property',
+    'medium': '4 - 5 Bedroom Executive Villa',
+    'large': 'Large Mansion / Commercial'
+  };
 
-  const text = encodeURIComponent(`Hi FreeCoat Decor! I used your online Cost Estimator.\n\nProject Scope: ${scopeText}\nProperty Size: ${sizeText}\nEstimated Range: ${priceDisplay}\n\nI would like to lock in a free site inspection and official quote!`);
+  const scopeText = scopeNames[selectedScope] || selectedScope.toUpperCase();
+  const sizeText = sizeNames[selectedSize] || selectedSize.toUpperCase();
+
+  const text = encodeURIComponent(`Hi FreeCoat Decor! I am interested in getting a custom project quote.\n\nProject Scope: ${scopeText}\nProperty Size: ${sizeText}\n\nI would like to discuss pricing and book a free site inspection directly with the owner!`);
   window.open(`https://wa.me/233240854667?text=${text}`, '_blank');
 }
 
