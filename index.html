@@ -32,6 +32,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/freecoat-premium.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: UpConstruction
@@ -226,57 +227,75 @@
     </section>
 
     <!-- Get Started Section -->
-    <section id="get-started" class="get-started section">
+    <section id="get-started" class="get-started section get-started-hero">
 
-      <div class="container">
+      <div class="get-started-bg" aria-hidden="true"></div>
+      <div class="get-started-shade" aria-hidden="true"></div>
 
-        <div class="row justify-content-between gy-4">
+      <div class="container position-relative get-started-inner">
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <div class="content">
-              <h3>Why Choose FreeCoat Decor?</h3>
-              <p>With over 14 years of experience and 350+ completed projects across Ghana, we deliver exceptional
-                painting and decoration services. From luxury homes in East Legon to government offices and commercial
-                buildings, our skilled team ensures premium quality, timely delivery, and customer satisfaction on every
-                project.
-              </p>
-              <p>We use only the best materials, employ trained professionals, and treat every space as if it were our
-                own. Whether it's a residential makeover or a large commercial contract, FreeCoat Decor is your trusted
-                partner for transforming spaces.</p>
+        <div class="row justify-content-between align-items-center gy-5">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+            <div class="content get-started-copy">
+              <span class="get-started-eyebrow">Trusted across Ghana</span>
+              <h3>Why Choose <span>FreeCoat Decor</span>?</h3>
+              <p class="get-started-lead">With over <strong>14 years</strong> of experience and <strong>350+</strong>
+                completed projects across Ghana, we deliver exceptional painting and decoration services â€” from luxury
+                homes in East Legon to government and commercial buildings.</p>
+              <p>We use premium materials, employ trained professionals, and treat every space as if it were our own.
+                Whether it is a residential makeover or a large commercial contract, FreeCoat Decor is your partner for
+                transforming spaces.</p>
+              <ul class="get-started-highlights">
+                <li><i class="bi bi-check2-circle"></i> Premium quality finishes</li>
+                <li><i class="bi bi-check2-circle"></i> On-time project delivery</li>
+                <li><i class="bi bi-check2-circle"></i> Free site inspection</li>
+              </ul>
             </div>
           </div>
 
-          <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="php-email-form">
-              <h3>Get a quote</h3>
-              <p>Need a quote for your painting or decoration project? Fill out the form and we'll get back to you
-                within 24 hours with a detailed estimate.</p>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="php-email-form get-started-form">
+              <div class="get-started-form-head">
+                <h3>Get a quote</h3>
+                <p>Tell us about your project â€” we will reply within 24 hours with a detailed estimate.</p>
+              </div>
               <div class="row gy-3">
 
                 <div class="col-12">
-                  <input type="text" name="name" class="form-control" placeholder="Name" required="">
+                  <label class="form-label" for="quote-name">Full name</label>
+                  <input type="text" name="name" id="quote-name" class="form-control" placeholder="e.g. Nana Kwame"
+                    required="">
                 </div>
 
-                <div class="col-12 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                <div class="col-md-6">
+                  <label class="form-label" for="quote-email">Email</label>
+                  <input type="email" class="form-control" name="email" id="quote-email" placeholder="name@example.com"
+                    required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label" for="quote-phone">Phone / WhatsApp</label>
+                  <input type="text" class="form-control" name="phone" id="quote-phone" placeholder="024 XXX XXXX"
+                    required="">
                 </div>
 
                 <div class="col-12">
-                  <input type="text" class="form-control" name="phone" placeholder="Phone" required="">
-                </div>
-
-                <div class="col-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Tell us about your project..."
-                    required=""></textarea>
+                  <label class="form-label" for="quote-message">Project details</label>
+                  <textarea class="form-control" name="message" id="quote-message" rows="4"
+                    placeholder="Location, rooms, timeline, preferred finish..." required=""></textarea>
                 </div>
 
                 <input type="hidden" name="_subject" value="New Quote Request - FreeCoat Decor">
                 <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
                 <input type="hidden" name="_next" value="https://yourdomain.netlify.app/thank-you.html">
-                <input type="text" name="_gotcha" style="display:none">
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-                <div class="col-12 text-center">
-                  <button type="submit">Get a quote</button>
+                <div class="col-12">
+                  <button type="submit" class="get-started-submit">
+                    <span>Get a quote</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </button>
                 </div>
 
               </div>
@@ -289,165 +308,54 @@
 
     </section><!-- /Get Started Section -->
 
-    <!-- Constructions Section -->
-    <section id="constructions" class="constructions section">
+    <!-- Who We Serve -->
+    <section id="who-we-serve" class="who-we-serve section">
+      <div class="who-serve-bg" aria-hidden="true"></div>
+      <div class="who-serve-shade" aria-hidden="true"></div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Our Specialties</h2>
-        <p>Explore our range of professional painting and decoration services tailored for homes, offices, and
-          commercial spaces</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/nice-interior-billionaire-dsign.jpg"
-                      alt="Interior Decoration"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Interior Decoration</h4>
-                    <p>Transform your indoor spaces with our expert interior decoration services. We create beautiful,
-                      functional living and working environments with premium finishes and attention to detail.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/fully-finished-exterior-design.jpg" alt="General Painting">
-                  </div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">General Painting & Spray Finishing</h4>
-                    <p>Professional painting services using premium paints and modern spray finishing techniques for
-                      smooth, durable, and beautiful results on all surfaces.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/pop-ceiling-3.jpg" alt="POP Ceiling Design"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">POP Ceiling Design</h4>
-                    <p>We design and install beautiful POP (Plaster of Paris) ceilings with modern patterns, lighting
-                      fixtures, and smooth finishes. From simple designs to elaborate 3D patterns.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/tiling.jpg" alt="Tiling Works"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Tiling Works</h4>
-                    <p>Expert tiling services for floors, walls, bathrooms, and kitchens. We install ceramic, porcelain,
-                      and decorative tiles with precision and professional finishing.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/wow-interior-design-ceiling-and-wall.jpg"
-                      alt="3D Wall & Ceiling Effects"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">3D Wall & Ceiling Effects</h4>
-                    <p>Create stunning visual impact with our 3D wall panels and ceiling designs. Modern textured
-                      finishes that add depth and character to any space.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/tv-unit.jpg" alt="Modern TV Unit Design"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">Modern TV Unit Design</h4>
-                    <p>Custom-designed TV units and entertainment centers that blend functionality with aesthetics.
-                      Built-in storage, cable management, and stylish finishes.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/3d-building-drawing.png" alt="3D Building Drawings"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">3D Building Drawings</h4>
-                    <p>Professional 3D architectural drawings and visualizations to help you see your project before
-                      construction begins. Detailed plans for accurate execution.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="800">
-            <div class="card-item">
-              <div class="row">
-                <div class="col-xl-5">
-                  <div class="card-bg"><img src="freecoat/smooth-wall-design.jpg" alt="3D Stucco Effect"></div>
-                </div>
-                <div class="col-xl-7 d-flex align-items-center">
-                  <div class="card-body">
-                    <h4 class="card-title">3D Stucco Effect</h4>
-                    <p>Create stunning textured finishes with our professional 3D stucco application. This decorative
-                      coating technique adds depth, character, and a modern aesthetic to both interior and exterior
-                      walls.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Card Item -->
-
+      <div class="container position-relative who-serve-inner">
+        <div class="section-title who-serve-title" data-aos="fade-up">
+          <span class="who-serve-eyebrow">Built for every client</span>
+          <h2>Who We Serve</h2>
+          <p>From luxury homes in Accra to commercial projects and clients living abroad — we finish spaces with the
+            same care.</p>
         </div>
 
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article class="who-serve-card">
+              <div class="who-serve-icon"><i class="bi bi-house-heart"></i></div>
+              <h3>Homes &amp; Villas</h3>
+              <p>Interior and exterior finishes for apartments, family homes, and luxury mansions.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <article class="who-serve-card">
+              <div class="who-serve-icon"><i class="bi bi-building"></i></div>
+              <h3>Offices &amp; Retail</h3>
+              <p>Clean, branded, professional spaces delivered with minimal business disruption.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article class="who-serve-card">
+              <div class="who-serve-icon"><i class="bi bi-buildings"></i></div>
+              <h3>Hotels &amp; Institutions</h3>
+              <p>Large commercial and government projects managed with clear timelines and quality control.</p>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <article class="who-serve-card">
+              <div class="who-serve-icon"><i class="bi bi-globe2"></i></div>
+              <h3>Diaspora Clients</h3>
+              <p>Build or renovate in Ghana while abroad — live updates, milestone payments, peace of mind.</p>
+              <a href="https://wa.me/233240854667?text=Hi%20FreeCoat%20Decor!%20I%20live%20abroad%20and%20want%20a%20consultation."
+                target="_blank" rel="noopener" class="who-serve-link">WhatsApp consultation <i
+                  class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
       </div>
-
-    </section><!-- /Constructions Section -->
+    </section><!-- /Who We Serve -->
 
     <!-- Interactive Multi-Project Draggable Before & After Split Slider -->
     <section class="section light-background" style="padding: 75px 0;">
@@ -482,11 +390,11 @@
         <div class="ba-comparison-wrapper" id="baComparisonWrapper" data-aos="zoom-in">
           <div class="ba-img-layer ba-img-after">
             <img src="freecoat/new-images/after-pop-ceiling.jpeg" alt="After Transformation" id="baImgAfterEl">
-            <span class="ba-badge-tag ba-badge-right" id="baBadgeAfterEl">✨ After: Completed Luxury POP</span>
+            <span class="ba-badge-tag ba-badge-right" id="baBadgeAfterEl">Ã¢Å“Â¨ After: Completed Luxury POP</span>
           </div>
           <div class="ba-img-layer ba-img-before" id="baImgBefore">
             <img src="freecoat/new-images/before-pop-ceiling.jpeg" alt="Before Transformation" id="baImgBeforeEl">
-            <span class="ba-badge-tag ba-badge-left" id="baBadgeBeforeEl">🛠️ Before: Raw POP Framing</span>
+            <span class="ba-badge-tag ba-badge-left" id="baBadgeBeforeEl">Ã°Å¸â€ºÂ Ã¯Â¸Â Before: Raw POP Framing</span>
           </div>
           <div class="ba-slider-handle" id="baSliderHandle"><i class="bi bi-arrows-collapse"></i></div>
         </div>
@@ -527,19 +435,19 @@
                   <div class="estimator-step-title">Step 1: Select Work Scope</div>
                   <div class="estimator-option-btn selected" data-scope-option
                     onclick="selectEstimatorOption('scope', 'interior', this)">
-                    <span>🎨 Interior Painting & Decor</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸Å½Â¨ Interior Painting & Decor</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                   <div class="estimator-option-btn" data-scope-option
                     onclick="selectEstimatorOption('scope', 'pop', this)">
-                    <span>💡 POP Ceiling & Lights</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸â€™Â¡ POP Ceiling & Lights</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                   <div class="estimator-option-btn" data-scope-option
                     onclick="selectEstimatorOption('scope', 'luxury', this)">
-                    <span>🏰 Luxury Mansion Full Finish</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸ÂÂ° Luxury Mansion Full Finish</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                   <div class="estimator-option-btn" data-scope-option
                     onclick="selectEstimatorOption('scope', 'commercial', this)">
-                    <span>🏢 Hotel & Commercial Plaza</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸ÂÂ¢ Hotel & Commercial Plaza</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                 </div>
 
@@ -547,15 +455,15 @@
                   <div class="estimator-step-title">Step 2: Property Scale</div>
                   <div class="estimator-option-btn selected" data-size-option
                     onclick="selectEstimatorOption('size', 'standard', this)">
-                    <span>🏠 2 - 3 Bedroom Property</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸ÂÂ  2 - 3 Bedroom Property</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                   <div class="estimator-option-btn" data-size-option
                     onclick="selectEstimatorOption('size', 'medium', this)">
-                    <span>🏡 4 - 5 Bedroom Executive Villa</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸ÂÂ¡ 4 - 5 Bedroom Executive Villa</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                   <div class="estimator-option-btn" data-size-option
                     onclick="selectEstimatorOption('size', 'large', this)">
-                    <span>🏰 Large Mansion / Commercial</span> <i class="bi bi-check-circle-fill"></i>
+                    <span>Ã°Å¸ÂÂ° Large Mansion / Commercial</span> <i class="bi bi-check-circle-fill"></i>
                   </div>
                 </div>
 
@@ -584,8 +492,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Services</h2>
-        <p>Comprehensive painting and decoration solutions for residential, commercial, and government projects across
-          Ghana</p>
+        <p>Painting and decoration solutions for homes, offices, and commercial projects across Ghana</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -593,76 +500,106 @@
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-mountain-city"></i>
+            <article class="service-item service-media-card position-relative">
+              <div class="service-media">
+                <img src="assets/img/Interior%20Decoration.jpg" alt="Interior Painting" loading="lazy">
+                <div class="service-media-veil"></div>
+                <span class="service-shape service-shape-a"></span>
+                <span class="service-shape service-shape-b"></span>
               </div>
-              <h3>Interior Painting</h3>
-              <p>Transform the inside of homes, offices, and commercial spaces using premium quality paints with smooth,
-                long-lasting finishes that enhance your interior aesthetics.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
+              <div class="service-body">
+                <h3>Interior Painting</h3>
+                <p>Premium paints and smooth, long-lasting finishes that elevate homes, offices, and commercial
+                  interiors.</p>
+                <a href="services.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <article class="service-item service-media-card position-relative">
+              <div class="service-media">
+                <img src="assets/img/Interior%20%26%20Exterior%20Decoration.jpg" alt="Exterior Painting" loading="lazy">
+                <div class="service-media-veil"></div>
+                <span class="service-shape service-shape-a"></span>
+                <span class="service-shape service-shape-b"></span>
+              </div>
+              <div class="service-body">
+                <h3>Exterior Painting</h3>
+                <p>Weather-resistant exterior finishes built for Ghana's climate - durable color and protection
+                  year-round.</p>
+                <a href="services.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+            <article class="service-item service-media-card position-relative">
+              <div class="service-media">
+                <img src="assets/img/POP%20Ceiling%20Design%20Design.jpg" alt="POP Ceiling Design" loading="lazy">
+                <div class="service-media-veil"></div>
+                <span class="service-shape service-shape-a"></span>
+                <span class="service-shape service-shape-b"></span>
               </div>
-              <h3>Exterior Painting</h3>
-              <p>Protect and beautify building exteriors with weather-resistant paints suitable for Ghana's tropical
-                climate, ensuring durability and vibrant colors year-round.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
+              <div class="service-body">
+                <h3>POP Ceiling Design</h3>
+                <p>Modern POP ceilings with patterns, lighting, and refined finishes that add elegance to any space.</p>
+                <a href="services.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-compass-drafting"></i>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article class="service-item service-media-card position-relative">
+              <div class="service-media">
+                <img src="assets/img/3D%20Wall%20%26%20Ceiling%20Effects.jpg" alt="Wallpaper and Decorations"
+                  loading="lazy">
+                <div class="service-media-veil"></div>
+                <span class="service-shape service-shape-a"></span>
+                <span class="service-shape service-shape-b"></span>
               </div>
-              <h3>POP Ceiling Design</h3>
-              <p>Design and install beautiful POP (Plaster of Paris) ceilings with modern patterns, lighting fixtures,
-                and smooth finishes that add elegance to any space.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
+              <div class="service-body">
+                <h3>Wallpaper &amp; Decorations</h3>
+                <p>Feature walls, wallpapers, and decorative finishes that make interiors distinctive and personal.</p>
+                <a href="services.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-trowel-bricks"></i>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <article class="service-item service-media-card position-relative">
+              <div class="service-media">
+                <img src="assets/img/General%20Painting%20%26%20Spray%20Finishing.jpg" alt="Commercial Contracts"
+                  loading="lazy">
+                <div class="service-media-veil"></div>
+                <span class="service-shape service-shape-a"></span>
+                <span class="service-shape service-shape-b"></span>
               </div>
-              <h3>Wallpaper & Decoration</h3>
-              <p>Install modern wallpapers, create stunning feature walls, and add decorative touches that make spaces
-                unique and reflect your personal style.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
+              <div class="service-body">
+                <h3>Commercial Contracts</h3>
+                <p>Large-scale work for offices, hotels, and institutions - managed professionally and delivered on
+                  time.</p>
+                <a href="services.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-helmet-safety"></i>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <article class="service-item service-media-card position-relative">
+              <div class="service-media">
+                <img src="freecoat/smooth-wall-design.jpg" alt="Textured Finishes" loading="lazy">
+                <div class="service-media-veil"></div>
+                <span class="service-shape service-shape-a"></span>
+                <span class="service-shape service-shape-b"></span>
               </div>
-              <h3>Commercial Contracts</h3>
-              <p>Handle large-scale projects for government ministries, corporate offices, hotels, and commercial
-                buildings with professional project management and timely delivery.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              <div class="service-body">
+                <h3>Textured Finishes</h3>
+                <p>3D textures, stucco, and custom decorative coatings for luxury homes and standout commercial spaces.
+                </p>
+                <a href="services.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
               </div>
-              <h3>Textured Finishes</h3>
-              <p>Create textured walls, 3D designs, Venetian plaster, and custom decorative finishes for luxury homes
-                and offices that stand out from the ordinary.</p>
-              <a href="#" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div><!-- End Service Item -->
+            </article>
+          </div>
 
         </div>
 
@@ -677,7 +614,8 @@
 
         <div class="row justify-content-around gy-4">
           <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img
-              src="freecoat/ceo-himself-working-ongoing.jpg" alt="CEO Working"></div>
+              src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad.jpeg" alt="International Projects">
+          </div>
 
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <h3>Why Clients Trust FreeCoat Decor</h3>
@@ -1457,7 +1395,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">FreeCoat Decor</strong> <span>All Rights Reserved</span>
+      <p>Ã‚Â© <span>Copyright</span> <strong class="px-1 sitename">FreeCoat Decor</strong> <span>All Rights
+          Reserved</span>
       </p>
     </div>
 
