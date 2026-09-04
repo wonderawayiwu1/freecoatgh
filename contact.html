@@ -130,33 +130,36 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form name="contact" method="POST" data-netlify="true" class="php-email-form" action="/thank-you.html">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              data-success-redirect="/thank-you.html" class="fc-netlify-form contact-form-panel">
               <input type="hidden" name="form-name" value="contact">
-              <input type="text" name="_gotcha" style="display:none">
+              <p class="fc-honeypot" aria-hidden="true">
+                <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+              </p>
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                <div class="col-md-6">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                 </div>
 
-                <input type="hidden" name="_subject" value="New Contact Message - FreeCoat Decor">
-                <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
-                <input type="hidden" name="_next" value="https://yourdomain.netlify.app/thank-you.html">
-                <input type="text" name="_gotcha" style="display:none">
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
 
                 <div class="col-md-12 text-center">
+                  <div class="fc-form-status">
+                    <div class="loading">Sending…</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Message sent! We will reply soon.</div>
+                  </div>
                   <button type="submit">Send Message</button>
                 </div>
 
@@ -260,7 +263,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/netlify-forms.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>

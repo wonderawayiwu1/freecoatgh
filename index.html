@@ -485,10 +485,12 @@
           </div>
 
           <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
-            <form name="get-quote" method="POST" data-netlify="true" class="php-email-form get-started-form"
-              action="/thank-you.html">
+            <form name="get-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              data-success-redirect="/thank-you.html" class="get-started-form fc-netlify-form">
               <input type="hidden" name="form-name" value="get-quote">
-              <input type="text" name="_gotcha" style="display:none">
+              <p class="fc-honeypot" aria-hidden="true">
+                <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+              </p>
               <div class="get-started-form-head">
                 <h3>Get a quote</h3>
                 <p>Tell us about your project — we will reply within 24 hours with a detailed estimate.</p>
@@ -498,33 +500,33 @@
                 <div class="col-12">
                   <label class="form-label" for="quote-name">Full name</label>
                   <input type="text" name="name" id="quote-name" class="form-control" placeholder="e.g. Nana Kwame"
-                    required="">
+                    required>
                 </div>
 
                 <div class="col-md-6">
                   <label class="form-label" for="quote-email">Email</label>
                   <input type="email" class="form-control" name="email" id="quote-email" placeholder="name@example.com"
-                    required="">
+                    required>
                 </div>
 
                 <div class="col-md-6">
                   <label class="form-label" for="quote-phone">Phone / WhatsApp</label>
                   <input type="text" class="form-control" name="phone" id="quote-phone" placeholder="024 XXX XXXX"
-                    required="">
+                    required>
                 </div>
 
                 <div class="col-12">
                   <label class="form-label" for="quote-message">Project details</label>
                   <textarea class="form-control" name="message" id="quote-message" rows="4"
-                    placeholder="Location, rooms, timeline, preferred finish..." required=""></textarea>
+                    placeholder="Location, rooms, timeline, preferred finish..." required></textarea>
                 </div>
 
-                <input type="hidden" name="_subject" value="New Quote Request - FreeCoat Decor">
-                <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
-                <input type="hidden" name="_next" value="https://yourdomain.netlify.app/thank-you.html">
-                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
                 <div class="col-12">
+                  <div class="fc-form-status">
+                    <div class="loading">Sending…</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Thank you! We received your quote request.</div>
+                  </div>
                   <button type="submit" class="get-started-submit">
                     <span>Get a quote</span>
                     <i class="bi bi-arrow-right"></i>
@@ -590,138 +592,165 @@
       </div>
     </section><!-- /Who We Serve -->
 
-    <!-- Interactive Multi-Project Draggable Before & After Split Slider -->
-    <section class="section dark-showcase-section">
-      <div class="container">
-        <div class="text-center mb-4" data-aos="fade-up">
-          <span class="who-serve-eyebrow"
-            style="color: #f5b942; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; display: block; margin-bottom: 6px;">Visual
-            Proof &amp; Transformations</span>
-          <h2 class="font-weight-bold text-white" style="font-size: 34px;">Drag To Reveal Transformations</h2>
-          <p class="text-white-50" style="max-width: 680px; margin: 0 auto;">Click any project button below, then slide
-            the orange handle left or right to reveal raw framing stages turning into completed luxury finishes.</p>
-        </div>
+    <!-- Book Free Site Inspection — high-conversion section -->
+    <section id="book-inspection" class="fc-book section">
+      <div class="fc-book-bg" aria-hidden="true"></div>
+      <div class="fc-book-shade" aria-hidden="true"></div>
 
-        <!-- Project Selector Buttons -->
-        <div class="text-center mb-4" data-aos="fade-up">
-          <button class="ba-tab-btn active" onclick="switchBASliderProject('pop', this)"><i
-              class="bi bi-lightbulb-fill me-1"></i> Living Room POP Ceiling</button>
-          <button class="ba-tab-btn" onclick="switchBASliderProject('palace', this)"><i
-              class="bi bi-house-heart-fill me-1"></i> Royal Palace Facade</button>
-          <button class="ba-tab-btn" onclick="switchBASliderProject('pop2', this)"><i class="bi bi-stars me-1"></i>
-            Villa Ceiling &amp; Lighting</button>
-        </div>
+      <div class="container position-relative">
+        <div class="row align-items-center gy-5">
 
-        <!-- Active Project Title Badge -->
-        <div class="text-center mb-3">
-          <h5 class="font-weight-bold" style="color: #f5b942;" id="baProjectTitleEl">Modern Living Room POP Ceiling
-            Transformation</h5>
-        </div>
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="fc-eyebrow fc-eyebrow-light">Start your project</span>
+            <h2 class="fc-book-title">Book a Free Site Inspection</h2>
+            <p class="fc-book-lead">Tell us what you need. The owner reviews your request and replies on WhatsApp with clear next steps — no obligation, no hidden fees.</p>
 
-        <!-- Draggable Split Container -->
-        <div class="ba-comparison-wrapper" id="baComparisonWrapper" data-aos="zoom-in">
-          <div class="ba-img-layer ba-img-after">
-            <img src="freecoat/new-images/after-pop-ceiling.jpeg" alt="After Transformation" id="baImgAfterEl">
-            <span class="ba-badge-tag ba-badge-right" id="baBadgeAfterEl">After: Completed Luxury POP</span>
-          </div>
-          <div class="ba-img-layer ba-img-before" id="baImgBefore">
-            <img src="freecoat/new-images/before-pop-ceiling.jpeg" alt="Before Transformation" id="baImgBeforeEl">
-            <span class="ba-badge-tag ba-badge-left" id="baBadgeBeforeEl">Before: Raw POP Framing</span>
-          </div>
-          <div class="ba-slider-handle" id="baSliderHandle"><i class="bi bi-arrows-collapse"></i></div>
-        </div>
+            <ul class="fc-book-steps">
+              <li>
+                <span class="fc-book-step-num">01</span>
+                <div>
+                  <strong>Share your project scope</strong>
+                  <p>Painting, POP ceiling, luxury finish, or commercial work.</p>
+                </div>
+              </li>
+              <li>
+                <span class="fc-book-step-num">02</span>
+                <div>
+                  <strong>Free physical site visit</strong>
+                  <p>We measure properly and recommend materials that last in Ghana's climate.</p>
+                </div>
+              </li>
+              <li>
+                <span class="fc-book-step-num">03</span>
+                <div>
+                  <strong>Private custom quote</strong>
+                  <p>Transparent pricing discussed directly with the owner before work begins.</p>
+                </div>
+              </li>
+            </ul>
 
-        <div class="text-center mt-4">
-          <a href="#bookingModal" data-bs-toggle="modal"
-            class="btn btn-warning btn-lg px-5 py-3 rounded-pill text-dark font-weight-bold shadow-sm"><i
-              class="bi bi-magic me-2"></i> Get This Transformation For Your Space</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Project Scope & Consultation Request -->
-    <section class="section dark-estimator-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-            <span class="who-serve-eyebrow"
-              style="color: #f5b942; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.82rem; display: block; margin-bottom: 6px;">Instant
-              Private Consultation</span>
-            <h2 class="font-weight-bold text-white mb-3" style="font-size: 34px;">Request Your Custom Project Quote</h2>
-            <p class="lead text-white-50 mb-4">Select your scope and property size below. Connect directly with the
-              owner on WhatsApp to receive personalized pricing tailored to your space.</p>
-            <div class="d-flex align-items-center gap-3">
-              <div class="text-warning fs-3"><i class="bi bi-patch-check-fill"></i></div>
-              <div>
-                <strong class="d-block text-white">Free Physical Site Inspection</strong>
-                <span class="text-white-50 small">Tailored pricing discussed privately with the owner based on exact
-                  measurements and material selections.</span>
-              </div>
+            <div class="fc-book-trust">
+              <div><i class="bi bi-shield-check"></i> Workmanship warranty</div>
+              <div><i class="bi bi-camera-video"></i> Live updates for diaspora</div>
+              <div><i class="bi bi-clock-history"></i> On-time delivery</div>
             </div>
           </div>
 
           <div class="col-lg-7" data-aos="fade-left">
-            <div class="estimator-card dark-estimator-card">
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="estimator-step-title">Step 1: Select Work Scope</div>
-                  <div class="estimator-option-btn selected" data-scope-option
-                    onclick="selectEstimatorOption('scope', 'interior', this)">
-                    <span><i class="bi bi-palette-fill me-2 text-warning"></i> Interior Painting &amp; Decor</span> <i
-                      class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <div class="estimator-option-btn" data-scope-option
-                    onclick="selectEstimatorOption('scope', 'pop', this)">
-                    <span><i class="bi bi-lightbulb-fill me-2 text-warning"></i> POP Ceiling &amp; Lights</span> <i
-                      class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <div class="estimator-option-btn" data-scope-option
-                    onclick="selectEstimatorOption('scope', 'luxury', this)">
-                    <span><i class="bi bi-house-heart-fill me-2 text-warning"></i> Luxury Mansion Full Finish</span> <i
-                      class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <div class="estimator-option-btn" data-scope-option
-                    onclick="selectEstimatorOption('scope', 'commercial', this)">
-                    <span><i class="bi bi-building-fill me-2 text-warning"></i> Hotel &amp; Commercial Plaza</span> <i
-                      class="bi bi-check-circle-fill"></i>
+            <form name="site-inspection" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              data-success-redirect="/thank-you.html" class="fc-book-card fc-netlify-form">
+              <input type="hidden" name="form-name" value="site-inspection">
+              <p class="fc-honeypot" aria-hidden="true">
+                <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+              </p>
+              <input type="hidden" name="work_scope" id="bookScopeField" value="Interior Painting & Decor">
+              <input type="hidden" name="property_scale" id="bookSizeField" value="2 - 3 Bedroom Property">
+
+              <div class="fc-book-card-head">
+                <h3>Request your custom quote</h3>
+                <p>Select options, leave your details, and we email the owner instantly. You can also continue on WhatsApp.</p>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <p class="fc-book-label">What do you need?</p>
+                  <div class="fc-book-options">
+                    <button type="button" class="fc-book-option selected" data-scope-option data-label="Interior Painting & Decor"
+                      onclick="selectEstimatorOption('scope', 'interior', this)">
+                      <i class="bi bi-paint-bucket"></i>
+                      <span>Interior Painting &amp; Decor</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
+                    <button type="button" class="fc-book-option" data-scope-option data-label="POP Ceiling & Lights"
+                      onclick="selectEstimatorOption('scope', 'pop', this)">
+                      <i class="bi bi-lightbulb"></i>
+                      <span>POP Ceiling &amp; Lights</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
+                    <button type="button" class="fc-book-option" data-scope-option data-label="Luxury Mansion Full Finish"
+                      onclick="selectEstimatorOption('scope', 'luxury', this)">
+                      <i class="bi bi-house-door"></i>
+                      <span>Luxury Mansion Full Finish</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
+                    <button type="button" class="fc-book-option" data-scope-option data-label="Hotel & Commercial Plaza"
+                      onclick="selectEstimatorOption('scope', 'commercial', this)">
+                      <i class="bi bi-building"></i>
+                      <span>Hotel &amp; Commercial Plaza</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
                   </div>
                 </div>
 
-                <div class="col-md-6 mb-4">
-                  <div class="estimator-step-title">Step 2: Property Scale</div>
-                  <div class="estimator-option-btn selected" data-size-option
-                    onclick="selectEstimatorOption('size', 'standard', this)">
-                    <span><i class="bi bi-house-door-fill me-2 text-warning"></i> 2 - 3 Bedroom Property</span> <i
-                      class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <div class="estimator-option-btn" data-size-option
-                    onclick="selectEstimatorOption('size', 'medium', this)">
-                    <span><i class="bi bi-house-fill me-2 text-warning"></i> 4 - 5 Bedroom Executive Villa</span> <i
-                      class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <div class="estimator-option-btn" data-size-option
-                    onclick="selectEstimatorOption('size', 'large', this)">
-                    <span><i class="bi bi-buildings-fill me-2 text-warning"></i> Large Mansion / Commercial</span> <i
-                      class="bi bi-check-circle-fill"></i>
+                <div class="col-md-6">
+                  <p class="fc-book-label">Property scale</p>
+                  <div class="fc-book-options">
+                    <button type="button" class="fc-book-option selected" data-size-option data-label="2 - 3 Bedroom Property"
+                      onclick="selectEstimatorOption('size', 'standard', this)">
+                      <i class="bi bi-house"></i>
+                      <span>2 – 3 Bedroom Property</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
+                    <button type="button" class="fc-book-option" data-size-option data-label="4 - 5 Bedroom Villa"
+                      onclick="selectEstimatorOption('size', 'medium', this)">
+                      <i class="bi bi-houses"></i>
+                      <span>4 – 5 Bedroom Villa</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
+                    <button type="button" class="fc-book-option" data-size-option data-label="Large Mansion / Commercial"
+                      onclick="selectEstimatorOption('size', 'large', this)">
+                      <i class="bi bi-buildings"></i>
+                      <span>Large Mansion / Commercial</span>
+                      <i class="bi bi-check2 fc-book-check"></i>
+                    </button>
                   </div>
                 </div>
 
-                <div class="col-12 mt-2">
-                  <div class="estimator-price-result">
-                    <span class="text-white-50 uppercase small font-weight-bold">Project Quote &amp; Pricing</span>
-                    <div class="estimator-price-amount" id="estimatorPriceDisplay" style="color: #f5b942;">Custom
-                      Private Quote</div>
-                    <p class="small text-white-50 mb-3">Discussed privately with the owner based on physical site
-                      inspection &amp; scope
-                    </p>
-                    <button onclick="sendEstimateToWhatsApp()"
-                      class="btn btn-warning btn-lg text-dark font-weight-bold px-5 rounded-pill shadow"><i
-                        class="bi bi-whatsapp me-2"></i> Discuss Quote on WhatsApp</button>
+                <div class="col-md-6">
+                  <label class="fc-book-label" for="book-name">Full name</label>
+                  <input type="text" name="name" id="book-name" class="form-control fc-book-input" placeholder="e.g. Nana Kwame" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="fc-book-label" for="book-phone">Phone / WhatsApp</label>
+                  <input type="tel" name="phone" id="book-phone" class="form-control fc-book-input" placeholder="024 XXX XXXX" required>
+                </div>
+                <div class="col-12">
+                  <label class="fc-book-label" for="book-email">Email</label>
+                  <input type="email" name="email" id="book-email" class="form-control fc-book-input" placeholder="name@example.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="fc-book-label" for="book-message">Location &amp; details</label>
+                  <textarea name="message" id="book-message" class="form-control fc-book-input" rows="3"
+                    placeholder="Area in Accra, rooms, timeline..." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <div class="fc-book-result">
+                    <span class="fc-book-result-label">Your next step</span>
+                    <strong id="estimatorPriceDisplay">Free site inspection + private quote</strong>
+                    <p>We receive your request by email and reply within 24 hours. You can also message on WhatsApp.</p>
+                    <div class="fc-form-status">
+                      <div class="loading">Sending…</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Sent! Redirecting…</div>
+                    </div>
+                    <button type="submit" class="fc-book-submit">
+                      <i class="bi bi-send"></i>
+                      <span>Send request to FreeCoat</span>
+                    </button>
+                    <button type="button" onclick="sendEstimateToWhatsApp()" class="fc-book-wa">
+                      <i class="bi bi-whatsapp"></i>
+                      <span>Or discuss on WhatsApp</span>
+                    </button>
+                    <a href="tel:+233240854667" class="fc-book-call">
+                      <i class="bi bi-telephone"></i> Call +233 24 085 4667
+                    </a>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
+
         </div>
       </div>
     </section>
@@ -901,18 +930,12 @@
           </div>
 
           <!-- Vertical Image Showcase on Right -->
-          <div class="features-image col-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="fc-trust-media"
-              style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 4px solid #ffffff;">
-              <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-1.jpeg"
-                alt="FreeCoat Decor Craftsmanship" class="img-fluid"
-                style="width: 100%; height: 560px; object-fit: cover; border-radius: 16px;">
-              <div class="fc-trust-media-badge"
-                style="position: absolute; bottom: 25px; left: 25px; background: rgba(18, 29, 51, 0.92); color: #ffffff; padding: 14px 22px; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(245, 185, 66, 0.4); box-shadow: 0 10px 25px rgba(0,0,0,0.3);">
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="fc-trust-media" style="position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); border: 4px solid #ffffff; background: #0a0e14;">
+              <img src="freecoat/new-images/traveled-abraod-worked-with-clients-abroad-1.jpeg" alt="FreeCoat Decor Craftsmanship" style="width: 100%; height: 560px; object-fit: cover; display: block; border-radius: 16px;">
+              <div class="fc-trust-media-badge" style="position: absolute; bottom: 25px; left: 25px; background: rgba(18, 29, 51, 0.92); color: #ffffff; padding: 14px 22px; border-radius: 16px; backdrop-filter: blur(10px); border: 1px solid rgba(245, 185, 66, 0.4); box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 10;">
                 <strong style="display: block; font-size: 26px; color: #f5b942; line-height: 1;">14+</strong>
-                <span
-                  style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.85);">Years
-                  of trusted craft</span>
+                <span style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.85);">Years of trusted craft</span>
               </div>
             </div>
           </div>
@@ -1709,9 +1732,12 @@
               <div class="booking-trust-item"><i class="bi bi-clock-history"></i> 14+ Yrs Experience</div>
               <div class="booking-trust-item"><i class="bi bi-award"></i> Free Site Inspection</div>
             </div>
-            <form name="booking" method="POST" data-netlify="true" class="php-email-form" action="/thank-you.html">
+            <form name="booking" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+              data-success-redirect="/thank-you.html" class="fc-netlify-form">
               <input type="hidden" name="form-name" value="booking">
-              <input type="text" name="_gotcha" style="display:none">
+              <p class="fc-honeypot" aria-hidden="true">
+                <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+              </p>
               <div class="row gy-3">
                 <div class="col-md-6">
                   <label class="form-label font-weight-bold text-dark">Full Name *</label>
@@ -1723,7 +1749,7 @@
                 </div>
                 <div class="col-md-6">
                   <label class="form-label font-weight-bold text-dark">Email Address</label>
-                  <input type="email" name="email" class="form-control" placeholder="name@example.com">
+                  <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label font-weight-bold text-dark">Project Category *</label>
@@ -1747,9 +1773,12 @@
                   <textarea class="form-control" name="message" rows="3"
                     placeholder="Describe room sizes, timeline, preferred colors or specific request..."></textarea>
                 </div>
-                <input type="hidden" name="_subject" value="New Home Page Project Booking - FreeCoat Decor">
-                <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
                 <div class="col-12 text-center mt-4">
+                  <div class="fc-form-status">
+                    <div class="loading">Sending…</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Booking received! Redirecting…</div>
+                  </div>
                   <button type="submit"
                     class="btn btn-warning btn-lg text-dark font-weight-bold px-5 rounded-pill shadow"><i
                       class="bi bi-send-fill me-2"></i> Submit Booking Request</button>
@@ -1793,7 +1822,7 @@
 
       <!-- Vendor JS Files -->
       <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <script src="assets/js/netlify-forms.js"></script>
       <script src="assets/vendor/aos/aos.js"></script>
       <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
       <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>

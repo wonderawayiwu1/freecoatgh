@@ -586,53 +586,34 @@
       </div>
     </section>
 
-    <!-- NEW FEATURE: Interactive Multi-Project Draggable Before & After Split Slider -->
-    <section class="section light-background" style="padding: 75px 0;">
-      <div class="container">
-        <div class="text-center mb-4" data-aos="fade-up">
-          <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Interactive WOW
-            Experience</span>
-          <h2 class="font-weight-bold" style="color: #121d33; font-size: 34px;">Drag To Reveal Transformations</h2>
-          <p class="text-muted">Click any project button below, then slide the orange handle left or right to reveal raw
-            stages turning into pure luxury</p>
-        </div>
+    <!-- Gallery conversion CTA — replaces drag-to-reveal -->
+    <section class="fc-gallery-cta section">
+      <div class="fc-gallery-cta-bg" aria-hidden="true"></div>
+      <div class="fc-gallery-cta-shade" aria-hidden="true"></div>
 
-        <!-- Project Selector Buttons -->
-        <div class="text-center mb-4" data-aos="fade-up">
-          <button class="ba-tab-btn active" onclick="switchBASliderProject('pop', this)"><i
-              class="bi bi-lightbulb-fill me-1"></i> Living Room POP Ceiling</button>
-
-          <button class="ba-tab-btn" onclick="switchBASliderProject('palace', this)"><i
-              class="bi bi-house-heart-fill me-1"></i> Royal Palace Facade</button>
-          <button class="ba-tab-btn" onclick="switchBASliderProject('pop2', this)"><i class="bi bi-stars me-1"></i>
-            Villa Ceiling & Lighting</button>
-        </div>
-
-        <!-- Active Project Title Badge -->
-        <div class="text-center mb-3">
-          <h5 class="font-weight-bold text-dark" id="baProjectTitleEl">Modern Living Room POP Ceiling Transformation
-          </h5>
-        </div>
-
-        <!-- Draggable Split Container -->
-        <div class="ba-comparison-wrapper" id="baComparisonWrapper" data-aos="zoom-in">
-          <div class="ba-img-layer ba-img-after">
-            <img src="freecoat/new-images/after-pop-ceiling.jpeg" alt="After Transformation" id="baImgAfterEl">
-            <span class="ba-badge-tag ba-badge-right" id="baBadgeAfterEl"><i class="bi bi-check2-circle"></i> After:
-              Completed Luxury POP</span>
+      <div class="container position-relative">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7" data-aos="fade-right">
+            <span class="fc-eyebrow fc-eyebrow-light">Loved what you saw?</span>
+            <h2>Ready to transform your home or business?</h2>
+            <p>Browse the gallery below, then book a free site inspection. We’ll measure your space, recommend the right finish, and send a private quote on WhatsApp.</p>
+            <div class="fc-gallery-cta-perks">
+              <span><i class="bi bi-check2-circle"></i> Free site visit</span>
+              <span><i class="bi bi-check2-circle"></i> Owner-direct pricing</span>
+              <span><i class="bi bi-check2-circle"></i> Diaspora-friendly updates</span>
+            </div>
           </div>
-          <div class="ba-img-layer ba-img-before" id="baImgBefore">
-            <img src="freecoat/new-images/before-pop-ceiling.jpeg" alt="Before Transformation" id="baImgBeforeEl">
-            <span class="ba-badge-tag ba-badge-left" id="baBadgeBeforeEl"><i class="bi bi-hammer"></i> Before: Raw POP
-              Framing</span>
+          <div class="col-lg-5 text-lg-end" data-aos="fade-left">
+            <div class="fc-gallery-cta-actions">
+              <a href="#bookingModal" data-bs-toggle="modal" class="fc-gallery-cta-btn primary">
+                <i class="bi bi-calendar-check"></i> Book Free Inspection
+              </a>
+              <a href="https://wa.me/233240854667?text=Hi%20FreeCoat%20Decor!%20I%20saw%20your%20gallery%20and%20want%20a%20quote."
+                target="_blank" rel="noopener" class="fc-gallery-cta-btn secondary">
+                <i class="bi bi-whatsapp"></i> WhatsApp Quote
+              </a>
+            </div>
           </div>
-          <div class="ba-slider-handle" id="baSliderHandle"><i class="bi bi-arrows-collapse"></i></div>
-        </div>
-
-        <div class="text-center mt-4">
-          <a href="#bookingModal" data-bs-toggle="modal"
-            class="btn btn-warning btn-lg px-5 py-3 rounded-pill text-dark font-weight-bold shadow-sm"><i
-              class="bi bi-magic me-2"></i> Get This Transformation For Your Home</a>
         </div>
       </div>
     </section>
@@ -1014,9 +995,12 @@
             <div class="booking-trust-item"><i class="bi bi-clock-history"></i> 14+ Yrs Experience</div>
             <div class="booking-trust-item"><i class="bi bi-award"></i> Free Site Inspection</div>
           </div>
-          <form name="booking" method="POST" data-netlify="true" class="php-email-form" action="/thank-you.html">
-            <input type="hidden" name="form-name" value="booking">
-            <input type="text" name="_gotcha" style="display:none">
+          <form name="booking-gallery" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            data-success-redirect="/thank-you.html" class="fc-netlify-form">
+            <input type="hidden" name="form-name" value="booking-gallery">
+            <p class="fc-honeypot" aria-hidden="true">
+              <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="row gy-3">
               <div class="col-md-6">
                 <label class="form-label font-weight-bold text-dark">Full Name *</label>
@@ -1028,7 +1012,7 @@
               </div>
               <div class="col-md-6">
                 <label class="form-label font-weight-bold text-dark">Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="name@example.com">
+                <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label font-weight-bold text-dark">Project Category *</label>
@@ -1052,9 +1036,12 @@
                 <textarea class="form-control" name="message" rows="3"
                   placeholder="Describe room sizes, timeline, preferred colors or specific request..."></textarea>
               </div>
-              <input type="hidden" name="_subject" value="New Fast Booking Request - FreeCoat Decor Gallery">
-              <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
               <div class="col-12 text-center mt-4">
+                <div class="fc-form-status">
+                  <div class="loading">Sending…</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Booking received! Redirecting…</div>
+                </div>
                 <button type="submit"
                   class="btn btn-warning btn-lg text-dark font-weight-bold px-5 rounded-pill shadow"><i
                     class="bi bi-send-fill me-2"></i> Submit Booking Request</button>
@@ -1164,6 +1151,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="assets/js/netlify-forms.js"></script>
   <script src="assets/js/main.js"></script>
 
   <!-- Advanced Conversion Features Script -->

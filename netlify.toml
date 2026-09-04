@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+
+# Netlify Forms notifications are configured in Site settings → Forms → Form notifications
+# Add email: freecoatpaintingsdecor@gmail.com
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"

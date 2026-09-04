@@ -657,9 +657,12 @@
             <div class="booking-trust-item"><i class="bi bi-clock-history"></i> 14+ Yrs Experience</div>
             <div class="booking-trust-item"><i class="bi bi-award"></i> Free Site Inspection</div>
           </div>
-          <form name="booking" method="POST" data-netlify="true" class="php-email-form" action="/thank-you.html">
-            <input type="hidden" name="form-name" value="booking">
-            <input type="text" name="_gotcha" style="display:none">
+          <form name="booking-videos" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+            data-success-redirect="/thank-you.html" class="fc-netlify-form">
+            <input type="hidden" name="form-name" value="booking-videos">
+            <p class="fc-honeypot" aria-hidden="true">
+              <label>Don’t fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
             <div class="row gy-3">
               <div class="col-md-6">
                 <label class="form-label font-weight-bold text-dark">Full Name *</label>
@@ -671,7 +674,7 @@
               </div>
               <div class="col-md-6">
                 <label class="form-label font-weight-bold text-dark">Email Address</label>
-                <input type="email" name="email" class="form-control" placeholder="name@example.com">
+                <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
               </div>
               <div class="col-md-6">
                 <label class="form-label font-weight-bold text-dark">Project Category *</label>
@@ -695,9 +698,12 @@
                 <textarea class="form-control" name="message" rows="3"
                   placeholder="Describe room sizes, timeline, preferred colors or specific request..."></textarea>
               </div>
-              <input type="hidden" name="_subject" value="New Video Page Project Booking - FreeCoat Decor">
-              <input type="hidden" name="_cc" value="freecoatpaintingsdecor@gmail.com">
               <div class="col-12 text-center mt-4">
+                <div class="fc-form-status">
+                  <div class="loading">Sending…</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Booking received! Redirecting…</div>
+                </div>
                 <button type="submit"
                   class="btn btn-warning btn-lg text-dark font-weight-bold px-5 rounded-pill shadow"><i
                     class="bi bi-send-fill me-2"></i> Submit Booking Request</button>
@@ -807,6 +813,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Main JS File -->
+  <script src="assets/js/netlify-forms.js"></script>
   <script src="assets/js/main.js"></script>
 
   <!-- Advanced Conversion Features Script -->

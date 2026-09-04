@@ -1,5 +1,5 @@
 /* =======================================================
-   FreeCoat Decor â€” Service media cards & page polish
+   FreeCoat Decor ??? Service media cards & page polish
    ======================================================= */
 
 :root {
@@ -378,7 +378,7 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-/* Soft section backdrop â€” services page & homepage */
+/* Soft section backdrop ??? services page & homepage */
 .services-page #services.light-background,
 .index-page #services.light-background {
   background:
@@ -481,7 +481,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* =======================================================
-   Get Started ï¿½ photo backdrop + modern quote form
+   Get Started ? photo backdrop + modern quote form
    ======================================================= */
 .get-started.get-started-hero {
   position: relative;
@@ -612,7 +612,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Modern glass form */
-.get-started .get-started-form.php-email-form {
+.get-started .get-started-form.php-email-form,
+.get-started .get-started-form {
   background: rgba(255, 255, 255, 0.97) !important;
   backdrop-filter: blur(18px);
   border-radius: 22px !important;
@@ -737,7 +738,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* =======================================================
-   Who We Serve ï¿½ replaces overlapping Specialties block
+   Who We Serve ? replaces overlapping Specialties block
    ======================================================= */
 .who-we-serve {
   position: relative;
@@ -964,7 +965,7 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid rgba(245, 185, 66, 0.2);
 }
 /* =======================================================
-   Shared section chrome — readable, colourful, professional
+   Shared section chrome ? readable, colourful, professional
    ======================================================= */
 .fc-eyebrow {
   display: inline-block;
@@ -1061,19 +1062,37 @@ h1, h2, h3, h4, h5, h6,
   display: none !important;
 }
 
+/* Kill template absolute-image layout that collapses/hides our media */
+.fc-trust-section .features-image,
+.fc-commit-section .features-image,
+.alt-services.fc-trust-section .features-image {
+  position: relative !important;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.fc-trust-section .features-image img,
+.fc-commit-section .fc-trust-media img,
+.alt-services.fc-trust-section .features-image img,
+.fc-trust-media img {
+  position: static !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: 520px !important;
+  max-width: 100%;
+  object-fit: cover !important;
+  display: block !important;
+  z-index: auto !important;
+  border-radius: 24px !important;
+}
+
 .fc-trust-media {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 28px 60px rgba(10, 14, 20, 0.22);
-}
-
-.fc-trust-media img {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  display: block;
-  border-radius: 24px !important;
+  min-height: 520px;
+  background: #141b24;
 }
 
 .fc-trust-media-badge {
@@ -1608,8 +1627,15 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @media (max-width: 991px) {
+  .fc-trust-media {
+    min-height: 360px;
+  }
+
+  .fc-trust-section .features-image img,
+  .fc-commit-section .fc-trust-media img,
+  .alt-services.fc-trust-section .features-image img,
   .fc-trust-media img {
-    height: 360px;
+    height: 360px !important;
   }
 
   .fc-feature-panel {
@@ -1724,7 +1750,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* =======================================================
-   FC Showcase — cinematic dual-row endless reel
+   FC Showcase ? cinematic dual-row endless reel
    ======================================================= */
 .fc-showcase {
   position: relative;
@@ -2182,4 +2208,629 @@ h1, h2, h3, h4, h5, h6,
     mask-image: none;
     -webkit-mask-image: none;
   }
+}
+
+/* =======================================================
+   Book Free Inspection ? conversion section (replaces BA/estimator)
+   ======================================================= */
+.fc-book {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 100px 0 !important;
+  color: #fff;
+  background: #0a0e14;
+}
+
+.fc-book-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../../freecoat/new-images/after-pop-ceiling.jpeg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  animation: fcBookKen 22s ease-in-out infinite alternate;
+}
+
+.fc-book-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(115deg, rgba(8, 11, 16, 0.94) 0%, rgba(8, 11, 16, 0.82) 48%, rgba(8, 11, 16, 0.72) 100%),
+    radial-gradient(ellipse 50% 55% at 85% 20%, rgba(232, 155, 30, 0.22), transparent 55%);
+  pointer-events: none;
+}
+
+@keyframes fcBookKen {
+  from { transform: scale(1.05) translate(0, 0); }
+  to { transform: scale(1.12) translate(-1.5%, 1%); }
+}
+
+.fc-book .container {
+  position: relative;
+  z-index: 2;
+}
+
+.fc-book-title {
+  font-family: var(--heading-font);
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #fff !important;
+  margin: 0 0 16px;
+  line-height: 1.15;
+}
+
+.fc-book-lead {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+.fc-book-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fc-book-steps li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.fc-book-step-num {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-family: var(--heading-font);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #0a0e14;
+  background: linear-gradient(145deg, #e89b1e, #f5b942);
+  box-shadow: 0 10px 24px rgba(232, 155, 30, 0.35);
+}
+
+.fc-book-steps strong {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.fc-book-steps p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.fc-book-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fc-book-trust div {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.fc-book-trust i {
+  color: #f5b942;
+}
+
+.fc-book-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 28px;
+  padding: 32px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  color: var(--fc-ink);
+}
+
+.fc-book-card-head {
+  margin-bottom: 24px;
+}
+
+.fc-book-card-head h3 {
+  font-family: var(--heading-font);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--fc-ink) !important;
+  margin: 0 0 6px;
+}
+
+.fc-book-card-head p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #5a6573;
+}
+
+.fc-book-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6b7582;
+  margin-bottom: 12px;
+}
+
+.fc-book-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fc-book-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(10, 14, 20, 0.1);
+  background: #f4f6f9;
+  color: #2f3a46;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s var(--fc-ease), box-shadow 0.25s ease;
+}
+
+.fc-book-option > i:first-child {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(232, 155, 30, 0.14);
+  color: #c47e10;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.fc-book-option span {
+  flex: 1;
+  line-height: 1.3;
+}
+
+.fc-book-check {
+  opacity: 0;
+  color: #0a0e14;
+  font-size: 1.1rem;
+  transition: opacity 0.2s ease;
+}
+
+.fc-book-option:hover {
+  transform: translateY(-2px);
+  border-color: rgba(232, 155, 30, 0.45);
+  box-shadow: 0 10px 24px rgba(10, 14, 20, 0.08);
+}
+
+.fc-book-option.selected {
+  background: linear-gradient(135deg, rgba(232, 155, 30, 0.18), rgba(245, 185, 66, 0.22));
+  border-color: #e89b1e;
+  color: var(--fc-ink);
+  box-shadow: 0 12px 28px rgba(232, 155, 30, 0.2);
+}
+
+.fc-book-option.selected .fc-book-check {
+  opacity: 1;
+}
+
+.fc-book-option.selected > i:first-child {
+  background: linear-gradient(145deg, #e89b1e, #f5b942);
+  color: #0a0e14;
+}
+
+.fc-book-result {
+  margin-top: 18px;
+  padding: 20px 18px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #0f1520 0%, #172336 100%);
+  color: #fff;
+  box-shadow: 0 16px 36px rgba(10, 14, 20, 0.25);
+}
+
+.fc-book-result-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 6px;
+}
+
+.fc-book-result strong {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #f5b942;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.fc-book-result p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.fc-book-wa {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #25d366, #1ebe57);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.35);
+  cursor: pointer;
+  transition: transform 0.3s var(--fc-ease), box-shadow 0.3s ease;
+}
+
+.fc-book-wa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(37, 211, 102, 0.45);
+  color: #fff;
+}
+
+.fc-book-wa i {
+  font-size: 1.25rem;
+}
+
+.fc-book-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.fc-book-call:hover {
+  color: #f5b942;
+}
+
+/* Gallery CTA strip */
+.fc-gallery-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 80px 0 !important;
+  color: #fff;
+  background: #0a0e14;
+}
+
+.fc-gallery-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("../../freecoat/new-images/full-complete-mansion-interior.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.fc-gallery-cta-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(105deg, rgba(8, 11, 16, 0.92) 0%, rgba(8, 11, 16, 0.78) 55%, rgba(8, 11, 16, 0.7) 100%),
+    radial-gradient(ellipse 45% 50% at 90% 50%, rgba(232, 155, 30, 0.2), transparent 55%);
+}
+
+.fc-gallery-cta .container {
+  z-index: 2;
+}
+
+.fc-gallery-cta h2 {
+  font-family: var(--heading-font);
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff !important;
+  margin: 0 0 14px;
+}
+
+.fc-gallery-cta p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 20px;
+  max-width: 560px;
+}
+
+.fc-gallery-cta-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fc-gallery-cta-perks span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.fc-gallery-cta-perks i {
+  color: #f5b942;
+}
+
+.fc-gallery-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.fc-gallery-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s var(--fc-ease), box-shadow 0.3s ease;
+}
+
+.fc-gallery-cta-btn.primary {
+  background: linear-gradient(135deg, #e89b1e, #f5b942);
+  color: #0a0e14;
+  box-shadow: 0 14px 32px rgba(232, 155, 30, 0.4);
+}
+
+.fc-gallery-cta-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.fc-gallery-cta-btn:hover {
+  transform: translateY(-3px);
+  color: inherit;
+}
+
+.fc-gallery-cta-btn.secondary:hover {
+  background: rgba(37, 211, 102, 0.2);
+  border-color: #25d366;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .fc-book,
+  .fc-gallery-cta {
+    padding: 72px 0 !important;
+  }
+
+  .fc-book-card {
+    padding: 26px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fc-book-bg {
+    animation: none !important;
+  }
+}
+
+/* =======================================================
+   Soft section blends + Netlify form UI
+   ======================================================= */
+.who-we-serve {
+  padding-bottom: 180px !important;
+}
+
+.who-we-serve::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 14, 20, 0) 0%,
+    rgba(10, 14, 20, 0.35) 30%,
+    rgba(10, 14, 20, 0.78) 62%,
+    #0a0e14 100%
+  );
+}
+
+.fc-book {
+  margin-top: -110px;
+  padding-top: 150px !important;
+}
+
+.fc-book-bg {
+  /* Soften harsh photo edge at section join */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 18%, #000 100%);
+}
+
+.fc-book-shade {
+  background:
+    linear-gradient(to bottom, #0a0e14 0%, rgba(10, 14, 20, 0.88) 12%, rgba(8, 11, 16, 0.72) 42%, rgba(8, 11, 16, 0.78) 100%),
+    linear-gradient(115deg, rgba(8, 11, 16, 0.94) 0%, rgba(8, 11, 16, 0.78) 55%, rgba(8, 11, 16, 0.7) 100%),
+    radial-gradient(ellipse 50% 55% at 85% 30%, rgba(232, 155, 30, 0.2), transparent 55%) !important;
+}
+
+.get-started.get-started-hero {
+  padding-bottom: 120px !important;
+}
+
+.get-started.get-started-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, #0a0e14);
+}
+
+.who-serve-shade {
+  background:
+    linear-gradient(to bottom, #0a0e14 0%, rgba(10, 14, 20, 0.55) 18%, transparent 48%),
+    linear-gradient(to top, rgba(10, 14, 20, 0.55) 0%, transparent 28%),
+    linear-gradient(160deg, rgba(8, 11, 16, 0.78) 0%, rgba(8, 11, 16, 0.58) 50%, rgba(8, 11, 16, 0.8) 100%),
+    radial-gradient(ellipse 50% 50% at 20% 10%, rgba(232, 155, 30, 0.18), transparent 55%) !important;
+}
+
+/* Smooth about trust background ? no hard vertical split */
+.fc-trust-bg {
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 0%, rgba(232, 155, 30, 0.12), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 80% 100%, rgba(232, 155, 30, 0.08), transparent 55%),
+    linear-gradient(180deg, #faf7f1 0%, #f3ebe0 50%, #f7f3ea 100%) !important;
+}
+
+.fc-commit-section,
+.about-page .alt-services-2,
+.about-page .alt-services {
+  background: linear-gradient(180deg, #faf7f1 0%, #f3ebe0 50%, #f7f3ea 100%) !important;
+}
+
+.fc-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.fc-form-status {
+  margin-bottom: 12px;
+}
+
+.fc-form-status .loading,
+.fc-form-status .error-message,
+.fc-form-status .sent-message {
+  display: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.fc-form-status .loading {
+  background: rgba(232, 155, 30, 0.15);
+  color: #9a6808;
+}
+
+.fc-form-status .sent-message {
+  background: rgba(37, 211, 102, 0.15);
+  color: #0f7a3a;
+}
+
+.fc-form-status .error-message {
+  background: rgba(220, 53, 69, 0.12);
+  color: #b02a37;
+}
+
+.fc-book-input {
+  border-radius: 12px !important;
+  border: 1.5px solid rgba(10, 14, 20, 0.12) !important;
+  background: #f4f6f9 !important;
+  padding: 12px 14px !important;
+  font-size: 0.98rem !important;
+  color: #0a0e14 !important;
+}
+
+.fc-book-input:focus {
+  border-color: #e89b1e !important;
+  background: #fff !important;
+  box-shadow: 0 0 0 4px rgba(232, 155, 30, 0.18) !important;
+  outline: none !important;
+}
+
+.fc-book-submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e89b1e, #f5b942);
+  color: #0a0e14;
+  font-size: 1rem;
+  font-weight: 800;
+  box-shadow: 0 14px 32px rgba(232, 155, 30, 0.35);
+  cursor: pointer;
+  transition: transform 0.3s var(--fc-ease), box-shadow 0.3s ease;
+}
+
+.fc-book-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(232, 155, 30, 0.45);
+  color: #0a0e14;
+}
+
+.get-started .get-started-form {
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(18px);
+  border-radius: 22px !important;
+  padding: 32px 28px !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
+  margin: 0 !important;
+}
+
+.contact .fc-netlify-form button[type="submit"] {
+  background: linear-gradient(135deg, #e89b1e, #f5b942);
+  color: #0a0e14;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 800;
 }

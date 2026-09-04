@@ -141,10 +141,18 @@ function selectEstimatorOption(type, value, element) {
     selectedScope = value;
     document.querySelectorAll('[data-scope-option]').forEach(btn => btn.classList.remove('selected'));
     element.classList.add('selected');
+    var scopeField = document.getElementById('bookScopeField');
+    if (scopeField) {
+      scopeField.value = element.getAttribute('data-label') || value;
+    }
   } else if (type === 'size') {
     selectedSize = value;
     document.querySelectorAll('[data-size-option]').forEach(btn => btn.classList.remove('selected'));
     element.classList.add('selected');
+    var sizeField = document.getElementById('bookSizeField');
+    if (sizeField) {
+      sizeField.value = element.getAttribute('data-label') || value;
+    }
   }
 
   calculateEstimatedPrice();
@@ -153,7 +161,7 @@ function selectEstimatorOption(type, value, element) {
 function calculateEstimatedPrice() {
   const priceEl = document.getElementById('estimatorPriceDisplay');
   if (priceEl) {
-    priceEl.innerText = "Custom Private Quote";
+    priceEl.innerText = "Free site inspection + private quote";
   }
 }
 
