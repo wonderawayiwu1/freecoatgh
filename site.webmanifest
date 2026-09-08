@@ -1,0 +1,30 @@
+{
+  "name": "FreeCoat Decor",
+  "short_name": "FreeCoat",
+  "description": "Professional painting, decoration, POP ceiling, tiling, epoxy flooring, plumbing and leakage solutions in Accra, Ghana.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0e14",
+  "theme_color": "#e89b1e",
+  "lang": "en-GH",
+  "categories": ["business", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/img/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/freecoat-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

@@ -2834,3 +2834,263 @@ h1, h2, h3, h4, h5, h6,
   padding: 12px 28px;
   font-weight: 800;
 }
+
+/* =======================================================
+   Draggable Help Float (Call / WhatsApp)
+   ======================================================= */
+.whatsapp-float,
+.call-float {
+  display: none !important;
+}
+
+.fc-help-float {
+  position: fixed;
+  right: 22px;
+  bottom: 28px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  touch-action: none;
+  user-select: none;
+}
+
+.fc-help-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 64px;
+  height: 64px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px;
+  cursor: grab;
+  color: #0a0e14;
+  background: linear-gradient(145deg, #e89b1e 0%, #f5b942 100%);
+  box-shadow:
+    0 14px 34px rgba(232, 155, 30, 0.45),
+    0 0 0 4px rgba(255, 255, 255, 0.35);
+  font-family: var(--heading-font, inherit);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
+}
+
+.fc-help-btn:active,
+.fc-help-float.is-dragging .fc-help-btn {
+  cursor: grabbing;
+  transform: scale(1.04);
+}
+
+.fc-help-btn-icon {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.fc-help-btn-close {
+  display: none;
+  font-size: 1.1rem;
+}
+
+.fc-help-float.is-open .fc-help-btn-icon,
+.fc-help-float.is-open .fc-help-btn-label {
+  display: none;
+}
+
+.fc-help-float.is-open .fc-help-btn-close {
+  display: inline-block;
+}
+
+.fc-help-float.is-open .fc-help-btn {
+  width: 64px;
+  padding: 0;
+  background: #0a0e14;
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(10, 14, 20, 0.35);
+}
+
+.fc-help-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 230px;
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(10, 14, 20, 0.08);
+  box-shadow: 0 22px 50px rgba(10, 14, 20, 0.22);
+  backdrop-filter: blur(12px);
+  animation: fcHelpPop 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: bottom right;
+}
+
+.fc-help-menu[hidden] {
+  display: none !important;
+}
+
+@keyframes fcHelpPop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fc-help-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: #0a0e14 !important;
+  background: #f4f6f9;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.fc-help-option:hover {
+  transform: translateY(-1px);
+  border-color: rgba(232, 155, 30, 0.35);
+  background: #fff;
+}
+
+.fc-help-option-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.fc-help-call .fc-help-option-icon {
+  background: linear-gradient(145deg, #e89b1e, #f5b942);
+  color: #0a0e14;
+}
+
+.fc-help-wa .fc-help-option-icon {
+  background: linear-gradient(145deg, #25d366, #1ebe57);
+}
+
+.fc-help-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.2;
+}
+
+.fc-help-option-text strong {
+  font-size: 0.98rem;
+  font-weight: 750;
+}
+
+.fc-help-option-text small {
+  font-size: 0.78rem;
+  color: #5a6573;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .fc-help-btn-label {
+    display: none;
+  }
+
+  .fc-help-btn {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    padding: 0;
+  }
+
+  .fc-help-menu {
+    min-width: 210px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fc-help-menu {
+    animation: none;
+  }
+}
+
+/* ===== FAQ (SEO + UX) ===== */
+.fc-faq {
+  position: relative;
+  padding: 72px 0 88px;
+  background:
+    radial-gradient(ellipse 70% 50% at 10% 0%, rgba(232, 155, 30, 0.08), transparent 55%),
+    linear-gradient(180deg, #f7f4ef 0%, #fff 45%, #f3f0ea 100%);
+}
+
+.fc-faq .section-title {
+  margin-bottom: 36px;
+}
+
+.fc-faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.fc-faq-item {
+  border: 1px solid rgba(20, 24, 32, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0 18px;
+  box-shadow: 0 8px 24px rgba(15, 20, 28, 0.04);
+}
+
+.fc-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: Syne, Outfit, sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #141820;
+  padding: 18px 28px 18px 0;
+  position: relative;
+}
+
+.fc-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.fc-faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e89b1e;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.fc-faq-item[open] summary::after {
+  content: "–";
+}
+
+.fc-faq-item p {
+  margin: 0 0 18px;
+  color: #3d4550;
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+.fc-faq-item a {
+  color: #b8740f;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Prefer the live Netlify site
+Sitemap: https://freecoatgh.netlify.app/sitemap.xml
+
+# Soft-block utility / template leftovers from indexing
+Disallow: /starter-page.html
+Disallow: /thank-you.html
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

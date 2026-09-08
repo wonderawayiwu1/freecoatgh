@@ -1,11 +1,153 @@
 [build]
   publish = "."
 
-# Netlify Forms notifications are configured in Site settings → Forms → Form notifications
-# Add email: freecoatpaintingsdecor@gmail.com
-
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    X-Robots-Tag = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+
+[[headers]]
+  for = "/thank-you.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/starter-page.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/freecoat/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+# Canonical: prefer / over /index.html
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/painting"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/painters"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/decoration"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/decorators"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/pop"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/pop-ceiling"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/ceiling"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/tiling"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/tiles"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/epoxy"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/epoxy-flooring"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/plumbing"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/leakage"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/leakage-solution"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/construction"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/quote"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/free-quote"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/book"
+  to = "/#book-inspection"
+  status = 301
+
+[[redirects]]
+  from = "/inspection"
+  to = "/#book-inspection"
+  status = 301
+
+[[redirects]]
+  from = "/freecoat"
+  to = "/"
+  status = 301
