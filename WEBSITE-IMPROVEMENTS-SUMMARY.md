@@ -59,7 +59,7 @@ A comprehensive, categorized gallery displaying ALL project images.
 - Multi-story commercial buildings
 - Plaza designs
 - Commercial exteriors
-- Source: `freecoat/new-images/Long-cormercial-story-building.jpeg` + existing
+- Source: `freecoat/media/commercial/long-cormercial-story-building.jpeg` + existing
 
 #### 4. **Work in Progress** (3 images) 🔨
 - Live ongoing projects
@@ -71,13 +71,13 @@ A comprehensive, categorized gallery displaying ALL project images.
 - Roofing painting
 - Exterior decoration
 - Fence and building combos
-- Source: `freecoat/new-images/enterior-decoration.jpeg`, `roofing-painting-project.jpeg`
+- Source: `freecoat/media/interiors/enterior-decoration.jpeg`, `roofing-painting-project.jpeg`
 
 #### 6. **Special Features & Custom Work** (3 images) 🎨
 - TV unit designs
 - 3D building drawings
 - Custom decorative elements
-- Source: `freecoat/new-images/tv-unit-design.jpeg`
+- Source: `freecoat/media/living-rooms/tv-unit-design.jpeg`
 
 **Location:** https://yourdomain.com/gallery.html
 

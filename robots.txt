@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Prefer the live Netlify site
-Sitemap: https://freecoatgh.netlify.app/sitemap.xml
+Sitemap: https://freecoatghana.netlify.app/sitemap.xml
 
 # Soft-block utility / template leftovers from indexing
 Disallow: /starter-page.html

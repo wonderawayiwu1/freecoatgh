@@ -18,23 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
 /* --- Multi-Project Draggable Before / After Split Slider --- */
 const baProjects = {
   pop: {
-    before: 'freecoat/new-images/before-pop-ceiling.jpeg',
-    after: 'freecoat/new-images/after-pop-ceiling.jpeg',
+    before: 'freecoat/media/before-after/before-pop-ceiling.jpeg',
+    after: 'freecoat/media/before-after/after-pop-ceiling.jpeg',
     beforeLabel: 'Before: Raw POP Framing',
     afterLabel: 'After: Completed Luxury POP',
     title: 'Modern Living Room POP Ceiling Transformation'
   },
 
   palace: {
-    before: 'freecoat/palace-before.jpg',
-    after: 'freecoat/palace.jpg',
+    before: 'freecoat/media/before-after/palace-before.jpg',
+    after: 'freecoat/media/projects/palace.jpg',
     beforeLabel: 'Before: Bare Cement Facade',
     afterLabel: 'After: Royal Palace Finish',
     title: 'Royal Palace Royal Gold & White Facade Transformation'
   },
   pop2: {
-    before: 'freecoat/new-images/before-pop-ceiling-1.jpeg',
-    after: 'freecoat/new-images/final-fully-finished-pop-ceiling.jpeg',
+    before: 'freecoat/media/before-after/before-pop-ceiling-1.jpeg',
+    after: 'freecoat/media/ceilings/final-fully-finished-pop-ceiling.jpeg',
     beforeLabel: 'Before: Board Laying Stage',
     afterLabel: 'After: Final Integrated Lighting POP',
     title: 'Executive Villa POP Ceiling & Warm LED Lighting'
