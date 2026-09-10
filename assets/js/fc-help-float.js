@@ -1,15 +1,18 @@
 /**
- * FreeCoat Decor — Draggable Help Float
- * One floating Help button → Call or WhatsApp. Drag anywhere; position is saved.
+ * FreeCoat Decor — compact contact FAB (Call / WhatsApp)
+ * Industry-style round launcher; drag to reposition (saved).
  */
 (function () {
   "use strict";
 
   var PHONE = "+233240854667";
   var WA =
-    "https://wa.me/233240854667?text=" +
-    encodeURIComponent("Hi FreeCoat Decor! I would like to get a quote for painting services.");
-  var STORAGE_KEY = "fcHelpFloatPos";
+    (window.FreeCoatWhatsApp && window.FreeCoatWhatsApp.url) ||
+    "https://api.whatsapp.com/send?phone=233240854667&text=" +
+      encodeURIComponent(
+        "Thank you for contacting FreeCoat Decor. Please tell us what service you need and the location of the project."
+      );
+  var STORAGE_KEY = "fcHelpFloatPos_v2";
 
   function removeOldFloats() {
     document.querySelectorAll(".whatsapp-float, .call-float").forEach(function (el) {
@@ -18,30 +21,31 @@
   }
 
   function buildWidget() {
-    if (document.getElementById("fcHelpFloat")) return document.getElementById("fcHelpFloat");
+    var existing = document.getElementById("fcHelpFloat");
+    if (existing) existing.remove();
 
     var root = document.createElement("div");
     root.id = "fcHelpFloat";
     root.className = "fc-help-float";
     root.innerHTML =
-      '<div class="fc-help-menu" id="fcHelpMenu" hidden>' +
-      '  <a class="fc-help-option fc-help-call" href="tel:' +
+      '<div class="fc-help-menu" id="fcHelpMenu" role="menu" hidden>' +
+      '  <p class="fc-help-menu-title">Contact FreeCoat</p>' +
+      '  <a class="fc-help-option fc-help-call" role="menuitem" href="tel:' +
       PHONE +
       '">' +
-      '    <span class="fc-help-option-icon"><i class="bi bi-telephone-fill"></i></span>' +
-      "    <span class=\"fc-help-option-text\"><strong>Call us</strong><small>+233 24 085 4667</small></span>" +
+      '    <span class="fc-help-option-icon" aria-hidden="true"><i class="bi bi-telephone"></i></span>' +
+      '    <span class="fc-help-option-text"><strong>Call</strong><small>+233 24 085 4667</small></span>' +
       "  </a>" +
-      '  <a class="fc-help-option fc-help-wa" href="' +
+      '  <a class="fc-help-option fc-help-wa" role="menuitem" href="' +
       WA +
       '" target="_blank" rel="noopener">' +
-      '    <span class="fc-help-option-icon"><i class="bi bi-whatsapp"></i></span>' +
-      "    <span class=\"fc-help-option-text\"><strong>WhatsApp</strong><small>Chat with FreeCoat</small></span>" +
+      '    <span class="fc-help-option-icon" aria-hidden="true"><i class="bi bi-whatsapp"></i></span>' +
+      '    <span class="fc-help-option-text"><strong>WhatsApp</strong><small>Message the team</small></span>' +
       "  </a>" +
       "</div>" +
-      '<button type="button" class="fc-help-btn" id="fcHelpBtn" aria-expanded="false" aria-controls="fcHelpMenu" aria-label="Help — call or WhatsApp">' +
-      '  <i class="bi bi-headset fc-help-btn-icon"></i>' +
-      '  <span class="fc-help-btn-label">Help</span>' +
-      '  <i class="bi bi-x-lg fc-help-btn-close" aria-hidden="true"></i>' +
+      '<button type="button" class="fc-help-btn" id="fcHelpBtn" aria-expanded="false" aria-controls="fcHelpMenu" aria-label="Open contact options">' +
+      '  <i class="bi bi-chat-dots-fill fc-help-btn-icon" aria-hidden="true"></i>' +
+      '  <i class="bi bi-x fc-help-btn-close" aria-hidden="true"></i>' +
       "</button>";
 
     document.body.appendChild(root);
@@ -88,6 +92,7 @@
     function setOpen(state) {
       open = state;
       btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-label", open ? "Close contact options" : "Open contact options");
       root.classList.toggle("is-open", open);
       if (open) {
         menu.removeAttribute("hidden");

@@ -52,14 +52,24 @@
   to = "/"
   status = 301
 
+[[headers]]
+  for = "/videos.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, follow"
+
 [[redirects]]
   from = "/painting"
-  to = "/services.html"
+  to = "/painting-accra.html"
   status = 301
 
 [[redirects]]
   from = "/painters"
-  to = "/services.html"
+  to = "/painting-accra.html"
+  status = 301
+
+[[redirects]]
+  from = "/painting-accra"
+  to = "/painting-accra.html"
   status = 301
 
 [[redirects]]
@@ -74,37 +84,37 @@
 
 [[redirects]]
   from = "/pop"
-  to = "/services.html"
+  to = "/pop-ceiling-ghana.html"
   status = 301
 
 [[redirects]]
   from = "/pop-ceiling"
-  to = "/services.html"
+  to = "/pop-ceiling-ghana.html"
   status = 301
 
 [[redirects]]
   from = "/ceiling"
-  to = "/services.html"
+  to = "/pop-ceiling-ghana.html"
   status = 301
 
 [[redirects]]
   from = "/tiling"
-  to = "/services.html"
+  to = "/tiling-accra.html"
   status = 301
 
 [[redirects]]
   from = "/tiles"
-  to = "/services.html"
+  to = "/tiling-accra.html"
   status = 301
 
 [[redirects]]
   from = "/epoxy"
-  to = "/services.html"
+  to = "/epoxy-flooring-accra.html"
   status = 301
 
 [[redirects]]
   from = "/epoxy-flooring"
-  to = "/services.html"
+  to = "/epoxy-flooring-accra.html"
   status = 301
 
 [[redirects]]
@@ -139,15 +149,20 @@
 
 [[redirects]]
   from = "/book"
-  to = "/#book-inspection"
+  to = "/#bookingModal"
   status = 301
 
 [[redirects]]
   from = "/inspection"
-  to = "/#book-inspection"
+  to = "/#bookingModal"
   status = 301
 
 [[redirects]]
   from = "/freecoat"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/freecoat-decor"
   to = "/"
   status = 301

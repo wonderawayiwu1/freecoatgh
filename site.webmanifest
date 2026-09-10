@@ -1,7 +1,7 @@
 {
   "name": "FreeCoat Decor",
   "short_name": "FreeCoat",
-  "description": "Professional painting, decoration, POP ceiling, tiling, epoxy flooring, plumbing and leakage solutions in Accra, Ghana.",
+  "description": "FreeCoat Painting & Decor Co. Ltd — painting, POP ceilings, tiling, epoxy flooring and renovation in Ayikuma–Accra, Ghana. Call +233 24 085 4667.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -18,11 +18,12 @@
     {
       "src": "/assets/img/apple-touch-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/assets/img/freecoat-logo.jpg",
-      "sizes": "512x512",
+      "sizes": "225x109",
       "type": "image/jpeg",
       "purpose": "any"
     }

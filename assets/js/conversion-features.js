@@ -180,9 +180,12 @@ function sendEstimateToWhatsApp() {
 
   const scopeText = scopeNames[selectedScope] || selectedScope.toUpperCase();
   const sizeText = sizeNames[selectedSize] || selectedSize.toUpperCase();
+  const extra = "--- My Project Request ---\nService needed: " + scopeText + "\nProperty size: " + sizeText + "\nLocation: (please add)";
 
-  const text = encodeURIComponent(`Hi FreeCoat Decor! I am interested in getting a custom project quote.\n\nProject Scope: ${scopeText}\nProperty Size: ${sizeText}\n\nI would like to discuss pricing and book a free site inspection directly with the owner!`);
-  window.open(`https://wa.me/233240854667?text=${text}`, '_blank');
+  const url = (window.FreeCoatWhatsApp && window.FreeCoatWhatsApp.buildUrl)
+    ? window.FreeCoatWhatsApp.buildUrl(extra)
+    : ("https://api.whatsapp.com/send?phone=233240854667&text=" + encodeURIComponent(extra));
+  window.open(url, '_blank');
 }
 
 function initCostEstimator() {

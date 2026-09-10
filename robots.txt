@@ -1,12 +1,12 @@
 User-agent: *
 Allow: /
 
-# Prefer the live Netlify site
 Sitemap: https://freecoatghana.netlify.app/sitemap.xml
 
-# Soft-block utility / template leftovers from indexing
+# Soft-block utility / incomplete pages
 Disallow: /starter-page.html
 Disallow: /thank-you.html
+Disallow: /videos.html
 
 User-agent: Googlebot
 Allow: /
