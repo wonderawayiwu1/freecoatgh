@@ -8,9 +8,9 @@
   <meta name="description" content="Watch FreeCoat Decor painters and POP craftsmen at work in Accra. Real project videos of painting, ceilings, exteriors and luxury finishes across Ghana.">
   <meta name="keywords" content="painting videos Ghana, FreeCoat videos, POP ceiling installation video Accra, decoration videos Accra">
   <meta name="author" content="FreeCoat Decor">
-  <meta name="robots" content="noindex, follow">
-  <meta name="googlebot" content="noindex, follow">
-  <meta name="bingbot" content="noindex, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow">
   <meta name="theme-color" content="#e89b1e">
   <meta name="format-detection" content="telephone=yes">
   <meta name="geo.region" content="GH-AA">
@@ -71,105 +71,113 @@
   <link href="assets/css/freecoat-premium.css" rel="stylesheet">
 
   <style>
+    .fc-video-heading {
+      font-family: var(--heading-font, Syne, sans-serif);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0a0e14;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin: 0.4rem 0 0.75rem;
+    }
+    .fc-video-lead {
+      color: #5a6470;
+      font-size: 1.02rem;
+      line-height: 1.65;
+      margin: 0;
+    }
     .video-card {
       background: #fff;
-      border-radius: 16px;
+      border-radius: 4px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transition: all 0.35s ease;
-      margin-bottom: 30px;
-      border: 1px solid #f0f0f0;
-      position: relative;
+      border: 1px solid rgba(10, 14, 20, 0.1);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
-
     .video-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
-      border-color: #FF9900;
+      border-color: rgba(232, 155, 30, 0.45);
+      box-shadow: 0 12px 28px rgba(10, 14, 20, 0.1);
     }
-
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%;
-      /* 16:9 ratio */
-      height: 0;
+      aspect-ratio: 16 / 9;
+      background: #0a0e14;
       overflow: hidden;
-      background: #0f1d32;
     }
-
     .video-wrapper video {
-      position: absolute;
-      top: 0;
-      left: 0;
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      background: #0a0e14;
     }
-
     .video-info {
-      padding: 24px;
+      padding: 1rem 1.1rem 1.15rem;
+      flex: 1;
     }
-
-    .video-info h4 {
-      color: #121d33;
-      font-size: 19px;
+    .video-info h3 {
+      font-family: var(--heading-font, Syne, sans-serif);
+      font-size: 1.05rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+      color: #0a0e14;
+      margin: 0 0 0.35rem;
     }
-
     .video-info p {
-      color: #666;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 18px;
+      color: #5a6470;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
     }
-
-    .video-badge {
-      display: inline-block;
-      padding: 5px 14px;
-      background: rgba(255, 153, 0, 0.12);
-      color: #d97706;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-right: 6px;
-      margin-bottom: 6px;
-    }
-
-    .video-cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #FF9900;
-      text-decoration: none !important;
-      transition: color 0.2s;
-    }
-
-    .video-cta-btn:hover {
-      color: #d97706;
-    }
-
     .video-filter-btn {
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-size: 14px;
+      padding: 0.45rem 0.95rem;
+      border-radius: 2px;
+      font-size: 0.82rem;
       font-weight: 600;
-      border: 2px solid #e0e0e0;
+      letter-spacing: 0.02em;
+      border: 1px solid rgba(10, 14, 20, 0.14);
       background: #fff;
-      color: #333;
-      margin: 5px;
-      transition: all 0.3s ease;
+      color: #3a4553;
+      margin: 0.25rem;
       cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     }
-
     .video-filter-btn:hover,
     .video-filter-btn.active {
-      background: #FF9900;
+      background: #e89b1e;
+      border-color: #e89b1e;
+      color: #0a0e14;
+    }
+    .fc-video-cta {
+      background: #141b24;
       color: #fff;
-      border-color: #FF9900;
-      box-shadow: 0 4px 15px rgba(255, 153, 0, 0.3);
+      padding: 2rem 1.75rem;
+      border-radius: 4px;
+    }
+    .fc-video-cta h3 {
+      font-family: var(--heading-font, Syne, sans-serif);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 0.4rem;
+    }
+    .fc-video-cta p {
+      color: rgba(255,255,255,0.75);
+      margin: 0;
+    }
+    @media (max-width: 575px) {
+      .fc-video-filters {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.35rem;
+        -webkit-overflow-scrolling: touch;
+      }
+      .video-filter-btn {
+        flex: 0 0 auto;
+      }
     }
   </style>
 <script type="application/ld+json">
@@ -240,859 +248,657 @@
     <!-- Video Showcase Section -->
     <section class="section">
       <div class="container" data-aos="fade-up">
-
         <!-- Intro -->
         <div class="row mb-5">
           <div class="col-lg-8 mx-auto text-center">
-            <span class="text-warning font-weight-bold text-uppercase" style="letter-spacing: 1px;">Live On-Site
-              Action</span>
-            <h2 class="font-weight-bold mt-1" style="color: #121d33; font-size: 34px;">See Our Workmanship in Video</h2>
-            <p class="lead text-muted">Watch authentic site recordings of our painters and POP ceiling craftsmen at
-              work. From smooth wall finishing to multi-story exterior transformations, experience the FreeCoat standard
-              of excellence.</p>
+            <span class="fc-eyebrow">Live on site</span>
+            <h2 class="fc-video-heading">See our workmanship in video</h2>
+            <p class="fc-video-lead">Real project recordings from FreeCoat sites across Ghana — painting, POP ceilings, interiors and more.</p>
           </div>
         </div>
 
-        <!-- Video Filter Buttons -->
-        <div class="text-center mb-4">
-          <button class="video-filter-btn active" data-filter="all">All Videos (35)</button>
-          <button class="video-filter-btn" data-filter="commercial">Church & Commercial</button>
-          <button class="video-filter-btn" data-filter="interior">Interior & Living Room</button>
-          <button class="video-filter-btn" data-filter="pop">POP Ceiling & Wall Art</button>
-          <button class="video-filter-btn" data-filter="epoxy">Epoxy Flooring</button>
-          <button class="video-filter-btn" data-filter="exterior">Exterior & Pool</button>
-          <button class="video-filter-btn" data-filter="tv">TV Unit</button>
-          <button class="video-filter-btn" data-filter="crafts">Site Inspection & Quality</button>
-          <button class="video-filter-btn" data-filter="recent">New Uploads</button>
+        <div class="text-center mb-4 fc-video-filters" role="tablist" aria-label="Filter videos">
+          <button type="button" class="video-filter-btn active" data-filter="all">All (41)</button>
+          <button type="button" class="video-filter-btn" data-filter="commercial">Church &amp; Commercial</button>
+          <button type="button" class="video-filter-btn" data-filter="interior">Interior</button>
+          <button type="button" class="video-filter-btn" data-filter="pop">POP &amp; Ceilings</button>
+          <button type="button" class="video-filter-btn" data-filter="epoxy">Epoxy</button>
+          <button type="button" class="video-filter-btn" data-filter="exterior">Exterior &amp; Pool</button>
+          <button type="button" class="video-filter-btn" data-filter="tv">TV Unit</button>
+          <button type="button" class="video-filter-btn" data-filter="crafts">Inspection</button>
+          <button type="button" class="video-filter-btn" data-filter="recent">Recent</button>
         </div>
 
         <!-- Videos Grid -->
-                <div class="row gy-4" id="video-grid">
-
-          <div class="col-lg-6 video-item commercial interior" data-aos="fade-up" data-aos-delay="100">
-            <div class="video-card">
+        <div class="row gy-4" id="video-grid">
+          <div class="col-lg-6 col-xl-4 video-item commercial interior" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video1" controls poster="freecoat/media/interiors/interior-decoration-luxury-gold-living-room-chandeliers-01.jpeg" preload="metadata">
-                  <source src="freecoat/media/videos/cormercial-large-church-design-in-progress-1.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/cormercial-large-church-design-in-progress-1.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Commercial Church Project – Interior Finishing</h4>
-                <p>Interior painting of high church ceilings and walls with precision scaffolding and premium coatings.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-bank me-1"></i> Church Interior</span>
-                    <span class="video-badge"><i class="bi bi-paint-bucket me-1"></i> High Ceiling</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Church Interior</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item commercial crafts" data-aos="fade-up" data-aos-delay="150">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item commercial crafts" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video2" controls poster="freecoat/media/interiors/interior-decoration-living-room-blue-led-tray-ceiling-sunyani.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/cormercial-large-church-design-in-progress-2.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/cormercial-large-church-design-in-progress-2.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Church Project – Final Quality Walkthrough</h4>
-                <p>Final inspection and finishing touches after full exterior and interior painting of the church complex.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-check-circle-fill me-1"></i> Final Inspection</span>
-                    <span class="video-badge"><i class="bi bi-shield-check me-1"></i> Weather Guard</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Quality Finish</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item commercial exterior" data-aos="fade-up" data-aos-delay="200">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item commercial exterior" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video3" controls poster="freecoat/media/exteriors/exterior-decoration-grey-orange-pillar-boundary-wall-finished-takoradi.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/cormercial-large-church-design-in-progress.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/cormercial-large-church-design-in-progress.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Commercial Church Project – Exterior Coating</h4>
-                <p>Large-scale exterior painting and surface preparation for a major Presbyterian Church complex in Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-bank me-1"></i> Church Exterior</span>
-                    <span class="video-badge"><i class="bi bi-building me-1"></i> Commercial</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Commercial Project</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item epoxy interior commercial" data-aos="fade-up" data-aos-delay="250">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item epoxy" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video4" controls poster="freecoat/media/kitchens/kitchen-cabinet-installation-glossy-purple-black-marble-finished.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/epoxy-floor-design.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/epoxy-floor-design.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Epoxy Floor Installation & Smooth Finish</h4>
-                <p>Professional epoxy flooring application for durable, glossy, easy-to-clean commercial and residential floors.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-layers me-1"></i> Epoxy Floor</span>
-                    <span class="video-badge"><i class="bi bi-droplet me-1"></i> Sealed Finish</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Epoxy Flooring</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item interior" data-aos="fade-up" data-aos-delay="300">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video5" controls poster="freecoat/media/commercial/commercial-fitout-ghl-bank-reception-lounge-finished-04.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/freecoat-video-01.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/freecoat-video-01.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Professional Interior Painting Process</h4>
-                <p>Watch our skilled team transform a luxury residence with high-grade satin paints, crisp corner lines, and flawless coating execution.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-house me-1"></i> Residential</span>
-                    <span class="video-badge"><i class="bi bi-paint-bucket me-1"></i> Interior</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Style</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item exterior commercial" data-aos="fade-up" data-aos-delay="350">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video6" controls poster="freecoat/media/tv-units/tv-unit-design-marble-panel-wood-slat-media-wall-02.jpeg" preload="metadata">
-                  <source src="freecoat/media/videos/freecoat-video-02.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/freecoat-video-02.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Exterior Building Transformation</h4>
-                <p>High-altitude exterior weather-barrier painting on commercial and multi-storey residential structures in Accra.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-building me-1"></i> Exterior</span>
-                    <span class="video-badge"><i class="bi bi-shield-check me-1"></i> Weather Shield</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Exterior Paint</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item pop" data-aos="fade-up" data-aos-delay="400">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video7" controls poster="freecoat/media/wall-molding/wall-molding-bedroom-floral-mural-feature-wall-accra.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/freecoat-video-03.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/freecoat-video-03.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Modern POP Ceiling Craftsmanship</h4>
-                <p>POP ceiling fabrication and finishing that elevates living rooms, halls, and master suites.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-lightbulb me-1"></i> POP Ceiling</span>
-                    <span class="video-badge"><i class="bi bi-tools me-1"></i> Craft</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book POP Design</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item pop interior" data-aos="fade-up" data-aos-delay="450">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video8" controls poster="freecoat/media/artificial-grass/artificial-grass-installation-checkerboard-pathway-01.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/freecoat-video-04.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/freecoat-video-04.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Smooth Wall Finishing Technique</h4>
-                <p>Flawless wall preparation and coating — the FreeCoat smooth-wall standard for Accra homes.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-brush me-1"></i> Smooth Wall</span>
-                    <span class="video-badge"><i class="bi bi-check2-circle me-1"></i> Premium</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Wall Finish</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item crafts" data-aos="fade-up" data-aos-delay="500">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item crafts" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video9" controls poster="freecoat/media/ceo/freecoat-ceo-freedom-awayiwu-paint-laboratory-bench.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/live-at-site-project-inspection.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/live-at-site-project-inspection.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Live On-Site Project Inspection</h4>
-                <p>FreeCoat leadership reviewing workmanship on an active Accra site — quality control you can trust.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-clipboard-check me-1"></i> Inspection</span>
-                    <span class="video-badge"><i class="bi bi-person-badge me-1"></i> On Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Site Inspection</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item interior" data-aos="fade-up" data-aos-delay="550">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item interior" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video10" controls poster="freecoat/media/commercial/commercial-exterior-china-mall-koforidua-finished-facade.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/nice-living-room-design.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/nice-living-room-design.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Luxury Living Room Decoration</h4>
-                <p>Complete living room transformation with elegant wall finishes, lighting, and refined colour balance.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-house-heart me-1"></i> Living Room</span>
-                    <span class="video-badge"><i class="bi bi-stars me-1"></i> Luxury</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Living Room</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item pop interior" data-aos="fade-up" data-aos-delay="100">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item pop interior" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video11" controls poster="freecoat/media/painting/general-painting-column-entrance-scaffolding-in-progress.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/nice-wall-ceiling-design-1.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/nice-wall-ceiling-design-1.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Illuminated Ceiling & Wall Finishing</h4>
-                <p>Ceiling lighting integration with wall decoration for a bright, premium interior atmosphere.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-lightbulb me-1"></i> Lighting</span>
-                    <span class="video-badge"><i class="bi bi-house me-1"></i> Interior</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Ceiling Lights</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item pop interior" data-aos="fade-up" data-aos-delay="150">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item pop interior" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video12" controls poster="freecoat/media/exteriors/exterior-decoration-column-entrance-textured-stone-effect.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/nice-wall-ceiling-design.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/nice-wall-ceiling-design.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Wall & POP Ceiling Design Process</h4>
-                <p>Integrated wall and ceiling craftsmanship for modern Ghanaian homes — smooth lines and premium POP detail.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-lightbulb me-1"></i> POP Ceiling</span>
-                    <span class="video-badge"><i class="bi bi-paint-bucket me-1"></i> Walls</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book POP Ceiling</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item interior" data-aos="fade-up" data-aos-delay="200">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item exterior" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video13" controls poster="freecoat/media/interiors/interior-decoration-luxury-gold-living-room-chandeliers-01.jpeg" preload="metadata">
-                  <source src="freecoat/media/videos/palce-interior-nice-design.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/pool-wall-painting.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Palace-Style Interior Decoration</h4>
-                <p>Grand interior finishing for a luxury residence — ornate detail with FreeCoat precision.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-building me-1"></i> Luxury Home</span>
-                    <span class="video-badge"><i class="bi bi-gem me-1"></i> Palace Finish</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Luxury Interior</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item exterior" data-aos="fade-up" data-aos-delay="250">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item tv interior" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video14" controls poster="freecoat/media/interiors/interior-decoration-living-room-blue-led-tray-ceiling-sunyani.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/pool-wall-painting.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/tv-unit-decoration.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Pool Area & Exterior Wall Painting</h4>
-                <p>Durable exterior coatings for pool walls and outdoor surfaces that stand up to Ghana’s climate.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-water me-1"></i> Pool Area</span>
-                    <span class="video-badge"><i class="bi bi-building me-1"></i> Exterior</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book Exterior Paint</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item tv interior" data-aos="fade-up" data-aos-delay="300">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video15" controls poster="freecoat/media/exteriors/exterior-decoration-grey-orange-pillar-boundary-wall-finished-takoradi.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/tv-unit-decoration.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2810%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>Custom TV Unit Decoration</h4>
-                <p>Feature TV wall and unit finishing with lighting, panels, and precise paint detail.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-tv me-1"></i> TV Unit</span>
-                    <span class="video-badge"><i class="bi bi-columns-gap me-1"></i> Feature Wall</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book TV Unit</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item crafts" data-aos="fade-up" data-aos-delay="350">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video16" controls poster="freecoat/media/kitchens/kitchen-cabinet-installation-glossy-purple-black-marble-finished.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/whatsapp-video-2026-09-03-at-5.20.11-pm-1-.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2811%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>On-Site Craftsmanship Snapshot</h4>
-                <p>Real FreeCoat crew at work — authentic Accra site footage of our painting and decoration process.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-video me-1"></i> Site Clip</span>
-                    <span class="video-badge"><i class="bi bi-people me-1"></i> Crew</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book FreeCoat</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="400">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video17" controls poster="freecoat/media/commercial/commercial-fitout-ghl-bank-reception-lounge-finished-04.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-10.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2812%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 17</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="450">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video18" controls poster="freecoat/media/tv-units/tv-unit-design-marble-panel-wood-slat-media-wall-02.jpeg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-11.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2813%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 18</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="500">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video19" controls poster="freecoat/media/wall-molding/wall-molding-bedroom-floral-mural-feature-wall-accra.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-12.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2814%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 19</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="550">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video20" controls poster="freecoat/media/artificial-grass/artificial-grass-installation-checkerboard-pathway-01.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-13.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2815%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 20</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="100">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video21" controls poster="freecoat/media/ceo/freecoat-ceo-freedom-awayiwu-paint-laboratory-bench.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-14.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%2816%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 21</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="150">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video22" controls poster="freecoat/media/commercial/commercial-exterior-china-mall-koforidua-finished-facade.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-15.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%282%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 22</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="200">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video23" controls poster="freecoat/media/painting/general-painting-column-entrance-scaffolding-in-progress.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-16.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%283%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 23</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="250">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video24" controls poster="freecoat/media/exteriors/exterior-decoration-column-entrance-textured-stone-effect.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-2.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%284%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 24</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="300">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video25" controls poster="freecoat/media/interiors/interior-decoration-luxury-gold-living-room-chandeliers-01.jpeg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-3.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%285%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 25</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="350">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video26" controls poster="freecoat/media/interiors/interior-decoration-living-room-blue-led-tray-ceiling-sunyani.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-4.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%286%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 26</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="400">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video27" controls poster="freecoat/media/exteriors/exterior-decoration-grey-orange-pillar-boundary-wall-finished-takoradi.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-5.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%287%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 27</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="450">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video28" controls poster="freecoat/media/kitchens/kitchen-cabinet-installation-glossy-purple-black-marble-finished.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-6.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%288%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 28</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="500">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video29" controls poster="freecoat/media/commercial/commercial-fitout-ghl-bank-reception-lounge-finished-04.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-7.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20%20%289%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 29</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="550">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video30" controls poster="freecoat/media/tv-units/tv-unit-design-marble-panel-wood-slat-media-wall-02.jpeg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-8.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-08-20.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 30</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="100">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video31" controls poster="freecoat/media/wall-molding/wall-molding-bedroom-floral-mural-feature-wall-accra.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20-9.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-09-21%20%282%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 31</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="150">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video32" controls poster="freecoat/media/artificial-grass/artificial-grass-installation-checkerboard-pathway-01.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-08-20.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-09-21%20%283%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 32</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="200">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video33" controls poster="freecoat/media/ceo/freecoat-ceo-freedom-awayiwu-paint-laboratory-bench.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-09-21-2.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-08_23-09-21.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 33</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="250">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video34" controls poster="freecoat/media/commercial/commercial-exterior-china-mall-koforidua-finished-facade.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-09-21-3.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-11_06-36-53%20%282%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 34</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
-          <div class="col-lg-6 video-item recent crafts" data-aos="fade-up" data-aos-delay="300">
-            <div class="video-card">
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
               <div class="video-wrapper">
-                <video muted playsinline id="video35" controls poster="freecoat/media/painting/general-painting-column-entrance-scaffolding-in-progress.jpg" preload="metadata">
-                  <source src="freecoat/media/videos/video_2026-09-08_23-09-21.mp4" type="video/mp4">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-11_06-36-53%20%284%29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="video-info">
-                <h4>FreeCoat Project Video 35</h4>
-                <p>Recent FreeCoat Decor site recording — painting, decoration, POP ceilings and finishing across Accra, Ghana.</p>
-                <div class="d-flex justify-content-between align-items-center mt-3">
-                  <div>
-                    <span class="video-badge"><i class="bi bi-camera-reels me-1"></i> Recent</span>
-                    <span class="video-badge"><i class="bi bi-geo-alt me-1"></i> Accra Site</span>
-                  </div>
-                  <a href="#bookingModal" data-bs-toggle="modal" class="video-cta-btn"><i
-                      class="bi bi-arrow-right-circle-fill fs-5"></i> Book This Look</a>
-                </div>
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
               </div>
-            </div>
+            </article>
           </div>
 
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-11_06-36-53%20%285%29.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-11_06-36-53%20%286%29.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 video-item recent" data-aos="fade-up" data-aos-delay="100">
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/video_2026-09-11_06-36-53.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 video-item recent crafts" data-aos="fade-up" data-aos-delay="150">
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/WhatsApp%20Video%202026-09-03%20at%205.20.11%20PM%20%281%29.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 video-item recent crafts" data-aos="fade-up" data-aos-delay="0">
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/WhatsApp%20Video%202026-09-04%20at%206.15.01%20AM.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 col-xl-4 video-item recent crafts" data-aos="fade-up" data-aos-delay="50">
+            <article class="video-card">
+              <div class="video-wrapper">
+                <video playsinline controls preload="metadata" controlslist="nodownload">
+                  <source src="freecoat/videos/WhatsApp%20Video%202026-09-04%20at%206.28.11%20AM.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="video-info">
+                <h3>Project video</h3>
+                <p>FreeCoat Decor project recording — painting, finishing and decoration work in Ghana.</p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <!-- High-Converting CTA Banner -->
-        <section class="section mt-5"
-          style="background: linear-gradient(135deg, #121d33 0%, #1c2d4d 100%); border-radius: 20px; padding: 60px 40px; color: #fff;">
-          <div class="row align-items-center">
-            <div class="col-lg-8" data-aos="fade-right">
-              <h3 style="color: #FF9900; font-weight: 800; font-size: 32px;" class="mb-2">Impressed by Our Work in
-                Video?</h3>
-              <p class="lead mb-0" style="color: rgba(255,255,255,0.88);">Book a free site inspection and consultation.
-                Our master painters will deliver the exact quality you see in these videos.</p>
+        <section class="fc-video-cta mt-5" data-aos="fade-up">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+              <h3>Like what you see?</h3>
+              <p>Book a free site inspection. We deliver the same standard you see in these videos.</p>
             </div>
-            <div class="col-lg-4 text-lg-end text-center mt-4 mt-lg-0" data-aos="fade-left">
-              <a href="#bookingModal" data-bs-toggle="modal"
-                class="btn btn-warning btn-lg px-4 py-3 rounded-pill text-dark font-weight-bold shadow-lg"><i
-                  class="bi bi-calendar-check-fill me-2"></i> Book Project Today</a>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#bookingModal" data-bs-toggle="modal" class="fc-btn fc-btn-primary">Book a project</a>
             </div>
           </div>
         </section>
+
 
       </div>
     </section>
@@ -1226,7 +1032,7 @@
         </div>
 
         <div class="col-lg-3 col-md-3 footer-links">
-                    <h4>Service Areas</h4>
+          <h4>Service Areas</h4>
           <ul>
             <li><a href="contact.html">Ayikuma–Accra</a></li>
             <li><a href="contact.html">East Legon</a></li>
@@ -1299,24 +1105,46 @@
     });
   </script>
 
-
   <script>
     (function () {
-      function forceMute(v) {
-        v.muted = true;
-        v.defaultMuted = true;
-        v.setAttribute('muted', '');
-        try { v.volume = 0; } catch (e) {}
-      }
-      document.querySelectorAll('#video-grid video, .video-wrapper video').forEach(function (v) {
-        forceMute(v);
-        v.addEventListener('play', function () { forceMute(v); });
-        v.addEventListener('volumechange', function () {
-          if (!v.muted || v.volume > 0) forceMute(v);
+      var videos = Array.prototype.slice.call(
+        document.querySelectorAll("#video-grid video")
+      );
+      if (!videos.length) return;
+
+      videos.forEach(function (v) {
+        v.removeAttribute("poster");
+        v.removeAttribute("muted");
+        v.muted = false;
+        v.defaultMuted = false;
+        v.setAttribute("preload", "metadata");
+        v.setAttribute("playsinline", "");
+        v.setAttribute("controls", "");
+        // Paint a frame from the video itself (no poster image)
+        var paintFrame = function () {
+          try {
+            if (v.readyState >= 1 && v.currentTime < 0.15) {
+              v.currentTime = 0.12;
+            }
+          } catch (e) {}
+        };
+        v.addEventListener("loadedmetadata", paintFrame);
+        v.addEventListener("loadeddata", paintFrame);
+        if (v.readyState >= 1) paintFrame();
+      });
+
+      videos.forEach(function (v) {
+        v.addEventListener("play", function () {
+          v.muted = false;
+          try { if (v.volume === 0) v.volume = 1; } catch (e) {}
+          videos.forEach(function (other) {
+            if (other !== v && !other.paused) other.pause();
+          });
         });
       });
     })();
   </script>
+
 
 </body>
 

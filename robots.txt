@@ -6,7 +6,6 @@ Sitemap: https://freecoatghana.netlify.app/sitemap.xml
 # Soft-block utility / incomplete pages
 Disallow: /starter-page.html
 Disallow: /thank-you.html
-Disallow: /videos.html
 
 User-agent: Googlebot
 Allow: /
