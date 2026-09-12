@@ -50,7 +50,7 @@ It is **not** a web app with login or a database UI. It is a **static multi-page
 - **Accent / theme:** amber/gold `#e89b1e` (bright `#f5b942`)  
 - **Ink / dark:** charcoal `#0a0e14` / `#141b24`  
 - **Logo:** `assets/img/freecoat-logo.jpg`  
-- **Favicon:** `assets/img/favicon.png`  
+- **Favicon:** `assets/img/favicon.webp` (with `apple-touch-icon.webp`)  
 - Main custom stylesheet: `assets/css/freecoat-premium.css`  
 
 ---

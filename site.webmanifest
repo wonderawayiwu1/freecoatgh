@@ -11,8 +11,19 @@
   "categories": ["business", "lifestyle"],
   "icons": [
     {
+      "src": "/assets/img/favicon.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
+      "src": "/assets/img/apple-touch-icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
       "src": "/assets/img/favicon.png",
-      "sizes": "32x32",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
