@@ -3156,6 +3156,10 @@ h1, h2, h3, h4, h5, h6,
   color: #141820;
 }
 
+.fc-pg-block {
+  scroll-margin-top: 100px;
+}
+
 .fc-pg-block + .fc-pg-block {
   margin-top: 36px;
 }
