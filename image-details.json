@@ -2041,5 +2041,482 @@
     "alt_text": "Hand-painted scuba diver wall mural with fire extinguisher at entrance Accra",
     "placement": "Services → Wall Murals · Home page (featured)",
     "visibility": "Portfolio"
+  },
+  {
+    "filename": "epoxy-floor-metallic-marble-brown-gloss-living-room-finished.jpg",
+    "location": "Accra",
+    "category": "Epoxy Flooring",
+    "caption": "A full epoxy floor finished in warm brown marble tones — the metallic sheen you see is the resin catching the ceiling lights, and every swirl in the surface was poured and worked by hand before the seal coat went on. This is not a floor that gets painted. This is a floor that gets built.",
+    "alt_text": "Finished brown metallic epoxy floor with marble swirl pattern by FreeCoat Decor",
+    "placement": "Services → Epoxy Flooring (hero) · Gallery → Floors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "epoxy-floor-metallic-gold-purple-marble-in-progress.jpg",
+    "location": "Accra",
+    "category": "Epoxy Flooring",
+    "caption": "A metallic epoxy floor mid-pour — you can see the gold and purple tones swirling into the cream base coat, with the pillars reflected in the still-wet resin. This is the phase most clients never see. It's the phase where the pattern is actually created. By tomorrow it sets solid.",
+    "alt_text": "Metallic epoxy floor pouring with gold and purple marble effect in progress",
+    "placement": "Gallery → Construction & Craft · Services → Epoxy Flooring",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "epoxy-floor-deep-red-gloss-reflective-finished.jpg",
+    "location": "Accra",
+    "category": "Epoxy Flooring",
+    "caption": "A red epoxy floor shot after the final polish — the reflections in this surface are complete; you can see the window, the light fittings, even the fan blades mirrored in the finish. The colour is bold and deliberate. Clients choose red when they want a floor that has an attitude.",
+    "alt_text": "Finished deep red epoxy floor with high gloss finish by FreeCoat Decor",
+    "placement": "Gallery → Floors · Services → Epoxy Flooring",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "epoxy-floor-metallic-silver-grey-marble-large-space-finished.jpg",
+    "location": "Accra",
+    "category": "Epoxy Flooring · Commercial",
+    "caption": "A large commercial floor finished in metallic silver-grey epoxy — the swirls spread the length of the room, with the ceiling downlights reflected again and again in the surface. This is a floor designed to handle heavy traffic and still look like it belongs in a showroom.",
+    "alt_text": "Large commercial space with finished silver-grey metallic epoxy floor",
+    "placement": "Projects → Commercial · Gallery → Floors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "epoxy-floor-swimming-pool-deck-blue-marble-east-legon.jpg",
+    "location": "East Legon, Accra",
+    "category": "Epoxy Flooring · Pools",
+    "caption": "An epoxy pool deck finished with a hand-poured blue water-and-dolphin mural — the surface looks like it goes deeper than it does, which is exactly the trick. FreeCoat laid the epoxy and applied the artwork in the same process. Pool surrounds take a beating in the Ghanaian sun. This one will still look like this in ten years.",
+    "alt_text": "Epoxy pool deck with hand-poured blue water and dolphin artwork in East Legon",
+    "placement": "Services → Epoxy Flooring · Gallery → Pools & Outdoor",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "3d-stucco-effect-wall-marble-veining-textured-finished.jpg",
+    "location": "Accra",
+    "category": "Wall Molding Designs · 3D Stucco",
+    "caption": "A finished 3D stucco wall with marble veining running diagonally across — hand-applied plaster built up in layers and polished to this sheen, purple LED ceiling above, dark wood door on the right. No wallpaper. No decal. Just painted plaster, applied by hand.",
+    "alt_text": "3D stucco wall with marble veining texture by FreeCoat Decor Accra",
+    "placement": "Services → Wall Molding · Gallery → Feature Walls",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "3d-stucco-effect-gold-cream-swirl-corridor-finishing.jpg",
+    "location": "Accra",
+    "category": "Wall Molding Designs · 3D Stucco",
+    "caption": "A corridor wall finished in hand-applied 3D stucco with gold and cream swirl patterns — look at how the light plays across the surface, creating its own depth. Ceiling still being painted above, marble floor at the base. When this is done, it's the kind of corridor that slows you down as you walk through.",
+    "alt_text": "Corridor wall with gold cream 3D stucco swirl pattern by FreeCoat Decor",
+    "placement": "Gallery → Interiors · Services → Wall Molding",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "3d-stucco-effect-bathroom-hand-basin-wall-cream-polished.jpg",
+    "location": "Accra",
+    "category": "Wall Molding Designs · 3D Stucco",
+    "caption": "A bathroom wall finished in our 3D stucco effect — the cream surface catches the window light and shimmers as you move, the hand basin mounted cleanly on the wall, the floor still to be finished. This is the kind of wall that turns a bathroom from a functional space into something you actually notice.",
+    "alt_text": "Bathroom wall finished in cream 3D stucco effect by FreeCoat Decor",
+    "placement": "Gallery → Interiors · Services → Wall Molding",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "3d-stucco-marble-effect-interior-finished.jpg",
+    "location": "Accra",
+    "category": "Wall Molding Designs · 3D Stucco",
+    "caption": "An interior wall finished with our 3D stucco marble effect — cream and grey tones layered into a marble-like pattern, the surface polished to a soft sheen, purple LED cove lighting above. When clients want the look of marble without the cost, this is the finish we recommend.",
+    "alt_text": "Interior wall with 3D stucco marble effect by FreeCoat Decor Accra",
+    "placement": "Services → Wall Molding · Gallery → Feature Walls",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "graphiato-exterior-painting-textured-plaster-tema-in-progress.jpg",
+    "location": "Tema",
+    "category": "Wall Molding Designs · Graphiato",
+    "caption": "Graphiato work in progress at Tema — our crew on a scaffolding tower, applying the textured plaster mix to the exterior wall of a villa. Graphiato is one of our signature finishes. From a distance it looks like natural stone. Up close you see the hand that applied it.",
+    "alt_text": "FreeCoat crew applying Graphiato textured plaster at Tema villa",
+    "placement": "Services → Graphiato · Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "3d-palace-ceiling-wood-coffered-lighting-chandelier-finished.jpg",
+    "location": "Kumasi",
+    "category": "POP Ceiling & 3D Wall/Ceiling Designs · Palace",
+    "caption": "A palace ceiling finished with dark wood coffered panelling — recessed downlights centred in each grid, an ornate chandelier hanging from the centre, cream walls below with warm sconce lighting. This is what 'palace effect' means when we say it. It's not just a ceiling. It's the room's crown.",
+    "alt_text": "Palace ceiling finished in dark wood coffered panelling with chandelier by FreeCoat Decor",
+    "placement": "Projects → Palace case study (hero) · Gallery → POP Ceilings",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-design-pop-ceiling-wall-finishing-corridor-finished.jpg",
+    "location": "Accra",
+    "category": "POP Ceiling & 3D Wall/Ceiling Designs",
+    "caption": "A finished corridor — POP ceiling with LED cove running the length, cream walls, wood-effect tiled floor below, arched doorway on the right. When you finish a corridor this cleanly, it feels like it's part of the design rather than just the passage between rooms.",
+    "alt_text": "Finished corridor with POP ceiling and wood floor by FreeCoat Decor Accra",
+    "placement": "Gallery → Interiors · Services → POP Ceiling",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "madina-university-entrance-decoration-painting-in-progress.jpg",
+    "location": "Madina, Accra",
+    "category": "General Painting & Spray Painting · Institutional",
+    "caption": "The Madina University entrance sign being painted — worker in hi-vis up on the ladder, the green Madina logo panel already in place, red-brown column trim being touched up. You can see the whole building behind. This is the last stage of a big institutional job: the details that make the entrance feel finished.",
+    "alt_text": "FreeCoat worker painting Madina University entrance sign and columns",
+    "placement": "Projects → Institutional · Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "madina-university-exterior-painting-finished-accra.jpg",
+    "location": "Madina, Accra",
+    "category": "General Painting & Spray Painting · Institutional",
+    "caption": "The finished Madina University campus — cream walls with orange columns, red-brown metal roofs, paved driveway leading up to the entrance, well-kept landscaping out front. FreeCoat handled the full exterior finish. When students and staff arrive each morning, this is what they see.",
+    "alt_text": "Finished Madina University campus exterior by FreeCoat Decor Accra",
+    "placement": "Projects → Institutional (hero) · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "madina-university-interior-painting-decoration-construction-ongoing.jpg",
+    "location": "Madina, Accra",
+    "category": "General Painting & Spray Painting · Institutional",
+    "caption": "FreeCoat crew inside the Madina University building — painters on ladders and rollers, others working the ceiling, all in hi-vis, the whole corridor getting its finish coat. Institutional work means long corridors, high ceilings, and tight deadlines. We plan around their timetable, not ours.",
+    "alt_text": "FreeCoat crew painting Madina University interior corridors in progress",
+    "placement": "Projects → Institutional · Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "madina-university-interior-painting-ongoing-01.jpg",
+    "location": "Madina, Accra",
+    "category": "General Painting & Spray Painting · Institutional",
+    "caption": "A second angle on the Madina University interior job — one of our crew working the lower wall in a white hard hat and hi-vis vest, rollers, tape lines, and paint tins around him. When you're painting an institution, every edge has to be crisp. Nothing looks worse than sloppy trim in a classroom.",
+    "alt_text": "FreeCoat worker painting Madina University interior second angle",
+    "placement": "Projects → Institutional · Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-hotel-kokrobite-scaffolding-ongoing.jpg",
+    "location": "Kokrobite",
+    "category": "Interior & Exterior Decoration · Commercial",
+    "caption": "A hotel under renovation at Kokrobite — scaffolding across the front, our crew working different floors simultaneously, the building raw behind the framework. Hotels need the work done fast and clean. We plan around their reopening date, not our convenience.",
+    "alt_text": "Hotel under renovation with scaffolding in Kokrobite by FreeCoat Decor",
+    "placement": "Projects → Commercial · Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-hotel-kokrobite-scaffolding-ongoing-01.jpg",
+    "location": "Kokrobite",
+    "category": "Interior & Exterior Decoration · Commercial",
+    "caption": "A second angle on the Kokrobite hotel project — the crew scattered across the scaffolding towers, working the full height of the building. Every floor is a separate job with its own brief. Coordinating a team this size on a hotel project is what we do best.",
+    "alt_text": "Second angle of Kokrobite hotel renovation crew on scaffolding by FreeCoat Decor",
+    "placement": "Projects → Commercial · Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "salon-interior-design-purple-striped-theme-finished-02.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration · Commercial",
+    "caption": "A salon interior with purple and cream striped walls, ornate mirrors, crystal chandeliers above each station, herringbone wood-effect floor tiles, black reception desk in the foreground. This is what a finishing job looks like when the client says 'make it feel luxurious.'",
+    "alt_text": "Salon interior with purple striped walls and chandeliers by FreeCoat Decor",
+    "placement": "Projects → Commercial · Gallery → Salons",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "salon-interior-design-pink-theme-finished-01.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration · Commercial",
+    "caption": "A full salon interior finished in pink — pink walls, pink accent panels, black styling chairs, washing stations, framed portraits on the wall. FreeCoat handled the walls, ceiling, and full decorative finish. When a beauty business opens its doors, the space has to sell the brand. This one does.",
+    "alt_text": "Salon interior finished in pink theme with black styling chairs by FreeCoat Decor",
+    "placement": "Projects → Commercial · Gallery → Salons",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "exterior-decoration-cream-house-brick-corner-accent-east-legon-finished.jpg",
+    "location": "East Legon, Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished exterior in East Legon — cream walls with a hand-painted brick-corner accent running down the edge, white-framed windows, black-and-white tiled walkway below. Small detail work: the corner detail is painted, not actually brick. That's why it stands out. That's the kind of trick that saves clients thousands and looks even better.",
+    "alt_text": "Cream house exterior with painted brick corner accent in East Legon by FreeCoat Decor",
+    "placement": "Gallery → Exteriors · Services → Interior & Exterior Decoration",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-trasacco-townhouses-finished.jpg",
+    "location": "Trasacco Valley, Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A row of finished townhouses in Trasacco Valley — white walls with black window trim, brown brick accents, dark roofs, gated entries. A whole row of homes finished by the same FreeCoat crew. When developers trust you with the entire street, that says more than any single house could.",
+    "alt_text": "Finished row of townhouses in Trasacco Valley Accra by FreeCoat Decor",
+    "placement": "Projects → Residential · Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-orange-tiled-mansion-finished.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished residential mansion — cream and orange walls, red-brown metal roof, arched entrance portico, tiled forecourt stretching across the front. This is what the client sees when they pull into their driveway for the first time after we hand over. That feeling is why we do this work.",
+    "alt_text": "Finished orange and cream mansion exterior with tiled forecourt by FreeCoat Decor",
+    "placement": "Projects → Residential · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-mansion-blue-trim-kumasi.jpg",
+    "location": "Kumasi",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished two-storey mansion in Kumasi — blue-grey window and roof trim framing cream walls, arched balcony openings, brick feature sections, black gates at the entry. This one had a full interior and exterior finish by FreeCoat. Nothing was left for the second contractor.",
+    "alt_text": "Finished two-storey mansion with blue trim in Kumasi by FreeCoat Decor",
+    "placement": "Projects → Residential · Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-mansion-labadi-accra.jpg",
+    "location": "Labadi, Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished mansion in Labadi — cream walls with decorative dark trim, iron railings on every balcony, textured columns at the entry, arched windows above. FreeCoat handled the full interior and exterior finish. When the client hosts their first dinner, the house does most of the talking.",
+    "alt_text": "Finished mansion exterior with iron railings and textured columns in Labadi Accra",
+    "placement": "Projects → Residential · Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-finished-beige-villa-accra.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished villa exterior — beige walls with white trim, brown metal roof, iron balcony railings, arched entry portico. Simple palette, immaculate finish. This is the kind of house that gets noticed from the street without trying.",
+    "alt_text": "Finished beige villa exterior with white trim in Accra by FreeCoat Decor",
+    "placement": "Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-finished-grey-house-accra-01.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished house in grey and white — the roof already done, the walls clean, the compound paved, the landscaping planted. This is what a project looks like after the final walk-through, right before the client gets the keys. Nothing left to touch. Everything exactly where it should be.",
+    "alt_text": "Finished grey and white house exterior with paved compound in Accra",
+    "placement": "Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-finished-white-house-accra-03.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A third view of a finished house — white walls with grey trim, clean roofline, tidily paved compound. Same standard as everything else in this gallery. When you finish a job properly, the photos look the same from every angle. That's the point.",
+    "alt_text": "Finished white house exterior with grey trim in Accra by FreeCoat Decor",
+    "placement": "Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "full-interior-exterior-work-orange-red-roof-mansion-finished-accra.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished mansion in cream and peach with a distinctive red-brown metal roof — arched windows, decorative trim, matching tiled forecourt, boundary wall with gated entry. FreeCoat handled the full interior and exterior finish. This one is now on our portfolio because the client asked us to use it publicly.",
+    "alt_text": "Finished mansion in cream and peach with red roof in Accra by FreeCoat Decor",
+    "placement": "Projects → Residential · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-exterior-mansion-work-trasacco-white-villa-finished.jpg",
+    "location": "Trasacco Valley, Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished white villa in Trasacco Valley — grey trim, dark roof, arcaded balconies, black iron gates, paved compound, manicured lawn out front. FreeCoat did the full interior and exterior finish. Some projects ask for drama. This one asked for restraint. We delivered exactly what the architect intended.",
+    "alt_text": "Finished white villa in Trasacco Valley with arcaded balconies by FreeCoat Decor",
+    "placement": "Projects → Residential (hero) · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "villa-blue-slate-roof-black-gate-finished-good-job-accra.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished villa exterior — blue slate roof, cream walls with columned portico, black iron gate, paved driveway, lamp post on the pillar. Watermark says 'good job' — and honestly, it is. This is the standard we deliver on premium residential work.",
+    "alt_text": "Finished villa with blue slate roof and black gate by FreeCoat Decor Accra",
+    "placement": "Gallery → Exteriors · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "dining-room-3d-interior-decoration-finished-arched-ceiling-accra.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished dining room photographed through the arched partition — textured cream walls, white moulded dining chairs with wood detailing, ceiling rose and fan above, warm chandelier catching the marble floor. This is what a formal family dining room looks like when the finishing catches up to the ambition.",
+    "alt_text": "Finished dining room with arched partition and textured walls by FreeCoat Decor",
+    "placement": "Gallery → Dining Rooms · Services → Interior Decoration",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-decoration-red-dining-wall-wood-floor-chandelier-finished.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished dining room with a deep red feature wall, dark wood furniture, chandelier over the table, framed art on the walls, warm wood floors. Red walls are risky if the tone isn't right. This one is right — it feels warm and confident rather than loud.",
+    "alt_text": "Finished dining room with red feature wall and wood floors by FreeCoat Decor",
+    "placement": "Gallery → Dining Rooms · Services → Interior Decoration",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-design-living-room-tv-wall-wooden-shelf-finished.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration · Modern TV Unit Designs",
+    "caption": "A finished living room with a white built-in TV wall, floating shelves above, decorative objects placed carefully, yellow and blue accent pillows on the sofas, marble floor. FreeCoat handled the finishing — the walls, the ceiling, the shelving. The client chose the furniture palette to work with the light.",
+    "alt_text": "Finished living room with white TV wall and yellow blue accents by FreeCoat Decor",
+    "placement": "Gallery → Living Rooms · Services → TV Unit Design",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-design-bedroom-pink-white-furniture-finished-accra.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished kids' bedroom — one wall in warm terracotta, one in deep grey, pink and white study desk and wardrobe set against both, ceiling fan above, marble floor below. This was a project we finished for a family with two young daughters. They chose the colours. We made them work.",
+    "alt_text": "Finished kids bedroom with pink and white furniture by FreeCoat Decor Accra",
+    "placement": "Gallery → Bedrooms · Services → Interior Decoration",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-design-living-room-grey-sofas-yellow-accent-finished.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "A finished living room — charcoal grey sofas with yellow accent pillows, white built-in TV wall with floating shelves, gold-rimmed nesting coffee tables, marble floor beneath. FreeCoat handled the walls, ceiling, and shelving. The grey-and-yellow palette was chosen with the client to sit against the natural light.",
+    "alt_text": "Finished living room with grey sofas and yellow accents by FreeCoat Decor",
+    "placement": "Gallery → Living Rooms · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "interior-finishing-empty-room-hardwood-floor-sage-green-walls.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration",
+    "caption": "An empty room after our finishing pass — sage green walls, crisp white trim, gleaming hardwood floor, downlights in the ceiling, arched openings on both sides. When we hand over a room like this, the client can move furniture straight in. No touch-ups needed. No loose ends.",
+    "alt_text": "Finished empty room with sage green walls and hardwood floor by FreeCoat Decor",
+    "placement": "Gallery → Interiors · Services → Interior Decoration",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "general-painting-villa-exterior-ongoing-accra.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting",
+    "caption": "FreeCoat crew on-site — villa exterior mid-paint, the upper floors already finished in cream, the lower sections still getting their first coats. Palm tree on the right, blue sky above. This is the moment where a house starts to feel like someone's home again.",
+    "alt_text": "FreeCoat crew painting villa exterior in progress Accra",
+    "placement": "Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "general-painting-spray-finishing-black-gate-villa-accra.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Spray Finishing",
+    "caption": "Spray-finishing a black metal gate on a villa — the worker in protective gear, the spray gun laying down an even coat, masking paper protecting the walls and posts behind. Spray work needs more skill than most people realise. Move too fast and you get drips. Too slow and you get runs. This is what professional spray finishing looks like.",
+    "alt_text": "FreeCoat worker spray-finishing black metal gate at villa in Accra",
+    "placement": "Services → General Painting & Spray · Gallery → Exteriors",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "general-painting-spray-finishing-compound-boot-washing-in-progress.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Spray Finishing",
+    "caption": "Our spray painter at work on a villa compound — full protective gear, spray gun in hand, the black exterior already finished at the top, everything below masked and ready for the next pass. This kind of exterior work has to be planned hour by hour. Weather, masking, curing time — all of it matters.",
+    "alt_text": "FreeCoat spray painter at work on villa compound in Accra",
+    "placement": "Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "general-painting-spray-finishing-gate-black-masking-tape-in-progress.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Spray Finishing",
+    "caption": "Spray-finishing a metal slat gate — the whole gate wrapped in brown masking paper, one panel already done in black, the ladder and vacuum set up beside it. Masking tape is where the discipline shows. If you can't see the shape of the final product in your masking, you won't get the cleanest edges.",
+    "alt_text": "Spray-finishing gate with masking paper in progress by FreeCoat Decor",
+    "placement": "Gallery → Construction & Craft",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "general-painting-spray-finishing-arch-gate-brick-pillars-finished.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Spray Finishing",
+    "caption": "A finished arched entrance — brick-effect pillars on both sides, a black and gold decorative gate centred under the arch, spray-finished to a clean matte black. This is what a compound looks like when the entrance is treated like the first impression it is.",
+    "alt_text": "Finished arched entrance with brick pillars and spray-finished gate by FreeCoat Decor",
+    "placement": "Gallery → Exteriors · Home page (featured)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "spray-finishing-villa-black-white-gate-entrance-accra.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Finishing",
+    "caption": "A finished villa entrance with a black-and-white slatted gate, cream walls, artificial grass lawn, tiled walkway. Spray-finished metalwork with clean edges. This is what a compound looks like when the finish doesn't just stop at the house.",
+    "alt_text": "Villa entrance with spray-finished black and white gate by FreeCoat Decor Accra",
+    "placement": "Gallery → Exteriors · Services → Spray Finishing",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "pavement-floor-finished-red-diamond-pattern-accra.jpg",
+    "location": "Accra",
+    "category": "Interior & Exterior Decoration · Paving",
+    "caption": "A finished paved compound — grey base with red diamond accents painted into the paving, house set back behind the planted garden beds. This is a custom design we worked with the client on. No decals. No templates. Every red diamond was measured and painted by hand.",
+    "alt_text": "Finished paved compound with red diamond pattern by FreeCoat Decor Accra",
+    "placement": "Gallery → Exteriors · Services → General Painting",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "pavement-floor-painting-blue-grey-in-progress.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Paving",
+    "caption": "Three crew members rolling a blue-grey floor coating across a paved compound — the whole courtyard getting one even coat. Wide flat roller, careful overlaps, edges taped off. When we finish, this compound will look brand new for years.",
+    "alt_text": "FreeCoat crew rolling blue-grey pavement floor coating",
+    "placement": "Gallery → Construction & Craft · Services → General Painting",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "pavement-floor-painting-red-in-progress.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Paving",
+    "caption": "A single worker painting a hexagon paving floor in red — the brush stroke is going down one tile at a time, the bucket sitting beside him, sunlight casting long shadows. This is careful handwork. There's no machine for this. Just patience and the right paint.",
+    "alt_text": "Worker hand-painting hexagonal paving tiles red in Accra",
+    "placement": "Gallery → Construction & Craft · Services → General Painting",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "pavement-floor-painting-on-going-01.jpg",
+    "location": "Accra",
+    "category": "General Painting & Spray Painting · Paving",
+    "caption": "Paving being painted — our crew working the roller across the grey base coat, paint buckets spread across the compound, hexagon pattern emerging under the fresh paint. When a client's old paving looks tired, this is one of the fastest and most cost-effective ways to give the whole compound a lift.",
+    "alt_text": "FreeCoat crew painting pavement flooring in progress",
+    "placement": "Gallery → Construction & Craft · Services → General Painting",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "peegola-summer-hat-design-wood-framing-pool-area-in-progress.jpg",
+    "location": "Accra",
+    "category": "General Construction & Finishing · Renovation",
+    "caption": "A pergola frame being built above a hot tub and pool area — tropical hardwood beams, craftsmen working at the top, the structure already taking shape. This is the kind of bespoke outdoor work we do alongside our painting and decoration. When a client wants a private retreat in their own compound, we build it.",
+    "alt_text": "FreeCoat crew building pergola frame above pool and hot tub",
+    "placement": "Gallery → Construction & Craft · Services → Construction",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "freecoat-crew-construction-site-scaffolding-five-workers-accra.jpg",
+    "location": "Accra",
+    "category": "Team / Crew",
+    "caption": "Five of our crew on-site at a construction project — hard hats, hi-vis vests, the building still raw behind them, scaffolding on the right. This is the team that shows up on the day. This is who actually does the work. When FreeCoat says we have a crew, this is what we mean.",
+    "alt_text": "FreeCoat five-man crew at construction site with scaffolding Accra",
+    "placement": "About → Our Team · Gallery → Behind the Scenes",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "freecoat-ceo-freedom-awayiwu-emirates-paints-partner-showroom-dubai.jpg",
+    "location": "Dubai, UAE",
+    "category": "Team / Leadership · Diaspora",
+    "caption": "Freedom with an Emirates Paints partner — both of them in the middle of a working session, one holding a paint applicator. Behind them, the Emirates Paints showroom with coloured panels on the wall. Every product we recommend has been tested in the hands of these partners.",
+    "alt_text": "FreeCoat CEO with Emirates Paints partner at Dubai showroom",
+    "placement": "About → International section",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "freecoat-ceo-freedom-awayiwu-emirates-paints-warehouse-team-photo-dubai.jpg",
+    "location": "Dubai, UAE",
+    "category": "Team / Leadership · Diaspora",
+    "caption": "Inside the Emirates Paints distribution warehouse in Dubai — Freedom with two of the team, standing in front of racks stacked floor to ceiling with paint products. This is where our colour selection comes from. This is why the tones we recommend don't fade.",
+    "alt_text": "FreeCoat CEO Freedom Awayiwu with Emirates Paints team in Dubai warehouse",
+    "placement": "About → International section",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "freecoat-ceo-freedom-awayiwu-client-certificate-handover-abroad.jpg",
+    "location": "Dubai, UAE",
+    "category": "Team / Leadership · Diaspora",
+    "caption": "A certificate handover moment — our C.E.O Freedom Awayiwu receiving a training certificate from an international partner. The certificate means more than a piece of paper. It means our team is trained to international paint standards, and we bring that knowledge back to every project in Ghana.",
+    "alt_text": "FreeCoat CEO Freedom Awayiwu receiving training certificate from international partner",
+    "placement": "About → International section · Home page (trust block)",
+    "visibility": "portfolio"
+  },
+  {
+    "filename": "freecoat-logo-browser-app-gold-black-circle.jpg",
+    "location": "Ayikuma, Accra (Head Office)",
+    "category": "Brand asset",
+    "caption": "The FreeCoat circle logo — house silhouette in black, trowel in gold, the wordmark beneath. This is the mark you'll see on our invoices, our van, our flyers and every browser tab. A roofline and a painting trowel. It says exactly what we do.",
+    "alt_text": "FreeCoat Painting & Decor Co. Ltd official circle logo in gold and black",
+    "placement": "Browser favicon · App icon · Brand folder",
+    "visibility": "brand"
   }
 ]
